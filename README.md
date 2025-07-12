@@ -59,4 +59,4 @@ Katkıda bulunmak isterseniz, lütfen bir fork oluşturun ve değişiklikleriniz
 
 ## Lisans
 
-Bu proje OSTİMTECH Üniversitesi'ne aittir. Tüm hakları saklıdır.
+Bu proje HSD OSTİMTECH'e aittir. Tüm hakları saklıdır.
