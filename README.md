@@ -1,40 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
+# HSD OSTİMTECH Resmi Web Sitesi - Frontend
 
-First, run the development server:
+> Bu depo, OSTİMTECH Üniversitesi Hastanesi'nin (HSD OSTİMTECH) resmi web sitesinin frontend (kullanıcı arayüzü) kodlarını içerir.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Proje Hakkında
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Bu proje, modern web teknolojileri kullanılarak geliştirilmiş, ölçeklenebilir ve sürdürülebilir bir frontend mimarisi sunar. Kullanıcı dostu arayüzü, hızlı performansı ve kolay yönetilebilir yapısıyla öne çıkar.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Kullanılan Teknolojiler
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Aşağıdaki tablo, projede kullanılan ana teknolojileri ve ilgili ikonlarını içermektedir. İkonlar [skillicons.dev](https://skillicons.dev) üzerinden alınmıştır.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+| Teknoloji      | Açıklama                | İkon |
+|---------------|-------------------------|------|
+| Next.js       | React tabanlı framework | ![Next.js](https://skillicons.dev/icons?i=nextjs) |
+| TypeScript    | Tip güvenli JavaScript  | ![TypeScript](https://skillicons.dev/icons?i=typescript) |
+| Tailwind CSS  | Utility-first CSS       | ![Tailwind](https://skillicons.dev/icons?i=tailwind) |
+| Redux         | State yönetimi          | ![Redux](https://skillicons.dev/icons?i=redux) |
+| Framer Motion | Animasyon kütüphanesi   | ![Framer Motion](https://skillicons.dev/icons?i=framer) |
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Kurulum
 
-## Learn More
+Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 
-To learn more about Next.js, take a look at the following resources:
+1. Depoyu klonlayın:
+   ```bash
+   git clone https://github.com/HSD-OSTIMTECH/HSD-Frontend.git
+   cd HSD-Frontend
+   ```
+2. Bağımlılıkları yükleyin:
+   ```bash
+   pnpm install
+   # veya
+   npm install
+   # veya
+   yarn install
+   ```
+3. Geliştirme sunucusunu başlatın:
+   ```bash
+   pnpm dev
+   # veya
+   npm run dev
+   # veya
+   yarn dev
+   ```
+4. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açın.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## Proje Yapısı
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `pages/` : Sayfa bileşenleri ve rotalar
+- `public/` : Statik dosyalar
+- `styles/` : Global ve özel stiller
+- `components/` : (Varsa) Tekrar kullanılabilir React bileşenleri
 
-## Deploy on Vercel
+## Katkıda Bulunma
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Katkıda bulunmak isterseniz, lütfen bir fork oluşturun ve değişikliklerinizi yeni bir dalda yaparak pull request gönderin. Her türlü geri bildirime açığız.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## Lisans
+
+Bu proje OSTİMTECH Üniversitesi'ne aittir. Tüm hakları saklıdır.
