@@ -15,9 +15,9 @@ const Footer = () => {
             <Icon icon="hugeicons:arrow-up-right-01" className="text-primary text-2xl md:text-3xl" />
           </div>
 
-          <div className="border-b border-[#2c2c2c] mb-3" />
+          <div className="border-b border-gray mb-3" />
 
-          <p className="text-xs md:text-sm text-[#bdbdbd]">
+          <p className="text-xs md:text-sm text-neutral-300">
             Bültenimize abone olun ve ayrıcalıklı avantajlarla dolu bir dünyanın kapılarını aralayın. En yeni projelerimizi, özel etkinliklerimizi, ve heyecan verici güncellemelerimizden ilk siz haberdar olun.
           </p>
 
@@ -61,16 +61,16 @@ const Footer = () => {
         </div>
         <div className="flex gap-3">
           <a href="#" aria-label="Instagram">
-            <Icon icon="hugeicons:instagram" className="text-secondary text-2xl" />
+            <Icon icon="hugeicons:instagram" className="text-secondary text-3xl hover:rotate-[360deg] transition-all duration-500" />
           </a>
           <a href="#" aria-label="Medium">
-            <Icon icon="hugeicons:medium-square" className="text-secondary text-2xl" />
+            <Icon icon="hugeicons:medium-square" className="text-secondary text-3xl hover:rotate-[360deg] transition-all duration-500" />
           </a>
           <a href="#" aria-label="LinkedIn">
-            <Icon icon="hugeicons:linkedin-01" className="text-secondary text-2xl" />
+            <Icon icon="hugeicons:linkedin-01" className="text-secondary text-3xl hover:rotate-[360deg] duration-500" />
           </a>
           <a href="#" aria-label="YouTube">
-            <Icon icon="hugeicons:youtube" className="text-secondary text-2xl" />
+            <Icon icon="hugeicons:youtube" className="text-secondary text-3xl hover:rotate-[360deg] transition-all duration-500" />
           </a>
         </div>
       </div>
