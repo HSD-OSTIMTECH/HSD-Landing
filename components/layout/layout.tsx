@@ -10,7 +10,7 @@ type LayoutProps = React.PropsWithChildren<{}>;
 const Layout: React.FC<LayoutProps> = ({children}) => {
   return (
     <div className='flex flex-col min-h-screen'>
-        <Navbar isLogin={false}/>
+        <Navbar isLogin={true}/>
         
         <main className='flex-grow'>
             {children}
