@@ -87,7 +87,7 @@ const Navbar = ({ isLogin }: NavbarProps) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden mt-5 flex flex-col gap-2 bg-dark border border-white/10 p-4 rounded-xl"
+            className="absolute left-4 right-4 top-16 z-50 mt-3 flex flex-col gap-2 bg-black/40 backdrop-blur-xl border border-neutral-800 p-4 rounded-xl shadow-lg md:hidden"
           >
             <a href="/aboout" className={linkStyle}>
               Hakkımızda
