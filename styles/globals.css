@@ -21,3 +21,14 @@
 body {
   @apply bg-black text-white;
 }
+
+/* Core Team Card */
+.perspective {
+  perspective: 1000px;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotateY-180 {
+  transform: rotateY(180deg);
+}
