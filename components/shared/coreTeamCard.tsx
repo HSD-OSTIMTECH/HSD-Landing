@@ -29,7 +29,8 @@ const CoreTeamCard = () => {
                 <div className="absolute w-full h-full bg-gradient-to-b from-primary to-secondary text-white p-4 rounded-md backface-hidden transform rotateY-180 flex flex-col justify-center items-center gap-2 text-center">
                     <h3 className="text-lg font-bold">Default Avatar</h3>
                     <p className="text-sm text-gray-300">Yazılım Mühendisliği - Teknoloji Departmanı.</p>
-                    <p className="text-xs text-neutral-100">
+                    <p className="text-xs text-neutral-100 w-full max-w-72 break-words whitespace-normal text-center">
+
                         Passionate about creating beautiful and functional interfaces.
                         Loves working with React and Tailwind CSS. Always learning.
                     </p>
