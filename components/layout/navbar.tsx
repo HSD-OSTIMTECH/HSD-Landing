@@ -14,7 +14,7 @@ const Navbar = ({ isLogin }: NavbarProps) => {
     "text-neutral-400 hover:text-white hover:bg-primary/30 hover:border hover:border-primary hover:shadow-xs hover:shadow-secondary hover:-translate-y-1 transition-all px-3 py-1 rounded-md";
 
   return (
-    <nav className="max-w-7xl container mx-auto py-8 px-4 font-poppins">
+    <nav className="max-w-7xl container mx-auto py-8 font-poppins">
       {/* ÜST BAR */}
       <div className="flex items-center justify-between">
         {/* Logo */}
