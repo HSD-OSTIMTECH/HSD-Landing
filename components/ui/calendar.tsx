@@ -16,6 +16,11 @@ import {
 } from 'date-fns';
 import Button from './button';
 
+
+const turkishMonths = [
+  'OCAK', 'ŞUBAT', 'MART', 'NİSAN', 'MAYIS', 'HAZİRAN',
+  'TEMMUZ', 'AĞUSTOS', 'EYLÜL', 'EKİM', 'KASIM', 'ARALIK'
+];
 const weekDays = ['PZT', 'SAL', 'ÇAR', 'PER', 'CU', 'CUM', 'PAZA'];
 
 const Calendar = () => {
@@ -25,27 +30,31 @@ const Calendar = () => {
   // Example: dots for events
   const eventDays = [20, 24];
 
-  const renderHeader = () => (
-    <div className="flex items-center justify-between px-4 pt-4">
-      <button
-        onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
-        className="text-white text-2xl px-2"
-        aria-label="Previous month"
-      >
-        &#60;
-      </button>
-      <span className="text-white text-2xl font-semibold font-poppins">
-        {format(currentMonth, 'MMMM yyyy').toUpperCase()}
-      </span>
-      <button
-        onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
-        className="text-white text-2xl px-2"
-        aria-label="Next month"
-      >
-        &#62;
-      </button>
-    </div>
-  );
+  const renderHeader = () => {
+    const monthIndex = currentMonth.getMonth();
+    const year = currentMonth.getFullYear();
+    return (
+      <div className="flex items-center justify-between px-4 pt-4">
+        <button
+          onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
+          className="text-white text-2xl px-2"
+          aria-label="Previous month"
+        >
+          &#60;
+        </button>
+        <span className="text-white text-2xl font-semibold font-poppins">
+          {turkishMonths[monthIndex]} {year}
+        </span>
+        <button
+          onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
+          className="text-white text-2xl px-2"
+          aria-label="Next month"
+        >
+          &#62;
+        </button>
+      </div>
+    );
+  };
 
   const renderDays = () => (
     <div className="grid grid-cols-7 gap-2 mt-4">

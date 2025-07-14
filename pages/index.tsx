@@ -74,9 +74,10 @@ export default function Home() {
             HSD Hackathon
           </h2>
           <p className="text-lg ">
-            Türkiye’de öğrencilerin, öğretmenlerin, ebeveynlerin ve çocukların
-            (4 kategori) deprem hakkında bilinçlenmesi için oluşturulmuş web
-            sitesi
+            HSD Hackathon, Huawei Student Developers OSTİM Teknik Üniversitesi
+            tarafından düzenlenen ve öğrencilerin yaratıcı projeler geliştirmesini
+            teşvik eden bir etkinliktir. Bu hackathon, katılımcılara yenilikçi
+            fikirlerini hayata geçirme fırsatı sunar.
           </p>
           <div className="flex items-center gap-4">
             <Button variant="primary" href="/events/hsd-hackathon">
