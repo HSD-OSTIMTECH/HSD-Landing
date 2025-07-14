@@ -11,7 +11,6 @@ import {
   format,
   isSameMonth,
   isSameDay,
-  getDay,
   isToday,
 } from 'date-fns';
 import Button from './button';
