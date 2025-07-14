@@ -1,5 +1,8 @@
 import MediumCard from "@/components/shared/mediumCard";
 import TeamSlider from "@/components/teamSlider";
+
+// ui components
+import Calendar from "@/components/ui/calendar";
 import Button from "@/components/ui/button";
 
 export default function Home() {
@@ -60,6 +63,29 @@ export default function Home() {
           <MediumCard />
           <MediumCard />
           <MediumCard />
+        </div>
+      </section>
+
+      <section className="max-w-7xl container mx-auto flex items-center justify-between my-24">
+        <Calendar />
+
+        <div className="flex flex-col items-start gap-4 sm:max-w-lg md:max-w-2xl">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-advent-pro font-semibold max-w-lg">
+            HSD Hackathon
+          </h2>
+          <p className="text-lg ">
+            Türkiye’de öğrencilerin, öğretmenlerin, ebeveynlerin ve çocukların
+            (4 kategori) deprem hakkında bilinçlenmesi için oluşturulmuş web
+            sitesi
+          </p>
+          <div className="flex items-center gap-4">
+            <Button variant="primary" href="/events/hsd-hackathon">
+              Etkinliği İncele
+            </Button>
+            <Button variant="outline" href="/events">
+              Bütün Etkinlikleri Gör
+            </Button>
+          </div>
         </div>
       </section>
     </div>
