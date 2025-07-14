@@ -1,3 +1,4 @@
+import MediumCard from "@/components/shared/mediumCard";
 import TeamSlider from "@/components/teamSlider";
 import Button from "@/components/ui/button";
 
@@ -48,6 +49,18 @@ export default function Home() {
         </div>
 
         <img src="/images/mockap.png" alt="mockap for index page" />
+      </section>
+
+      <section className="max-w-7xl container mx-auto flex flex-col items-end my-48">
+        <h2 className="text-3xl sm:text-5xl md:text-7xl font-advent-pro font-semibold max-w-lg text-right">
+          Son Medium Yazılarımız
+        </h2>
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+          <MediumCard />
+          <MediumCard />
+          <MediumCard />
+          <MediumCard />
+        </div>
       </section>
     </div>
   );
