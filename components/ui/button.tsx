@@ -19,7 +19,7 @@ const variantClasses = {
   primary:
     'bg-primary text-white border-none hover:bg-primary/80 focus:ring-2 focus:ring-primary',
   outline:
-    'bg-transparent text-white border border-neutral-700 hover:border-primary hover:bg-primary/20 focus:ring-2 focus:ring-primary',
+    'bg-transparent backdrop-blur-sm text-white border border-neutral-700 hover:border-primary hover:bg-primary/20 focus:ring-2 focus:ring-primary',
 };
 
 export default function Button({
