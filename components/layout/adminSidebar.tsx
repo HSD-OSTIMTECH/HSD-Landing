@@ -47,6 +47,7 @@ const mainMenus = [
     subLinks: [
       { label: "Form Ekle", href: "/admin/forms/add" },
       { label: "Form Düzenle", href: "/admin/forms/edit" },
+      { label: "Formları İncele", href: "/admin/forms/manage" },
     ],
   },
 ];
