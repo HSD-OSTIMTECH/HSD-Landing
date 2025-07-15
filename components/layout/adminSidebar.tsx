@@ -85,7 +85,7 @@ const AdminSidebar = () => {
           alt="Avatar"
           className="w-14 h-14 rounded-full object-cover border-2 border-primary"
         />
-        <div className="text-white font-advent-pro text-base font-semibold flex items-center gap-1">
+        <div className="text-white font-advent-pro text-xl font-semibold flex items-center gap-1">
           Hoş Geldin Poyraz <span className="text-lg">👋</span>
         </div>
       </div>
@@ -162,7 +162,6 @@ const AdminSidebar = () => {
           <span>Ayarlar</span>
         </a>
         <Button
-          className="w-full !bg-red-600 hover:!bg-red-700 mt-2"
           type="button"
         >
           <Icon icon="hugeicons:logout-01" className="text-lg mr-2" />
