@@ -1,27 +1,40 @@
 
+
 # HSD OSTİMTECH Resmi Web Sitesi - Frontend
 
-> Bu depo, OSTİMTECH Üniversitesi Hastanesi'nin (HSD OSTİMTECH) resmi web sitesinin frontend (kullanıcı arayüzü) kodlarını içerir.
+Bu depo, OSTİMTECH Üniversitesi Hastanesi'nin (HSD OSTİMTECH) resmi web sitesinin frontend kodlarını içerir. Proje, modern web teknolojileriyle geliştirilmiş, kullanıcı dostu ve sürdürülebilir bir mimariye sahiptir.
+
+---
+
+## İçerik
+
+- [Proje Hakkında](#proje-hakkında)
+- [Teknolojiler](#teknolojiler)
+- [Kurulum ve Çalıştırma](#kurulum-ve-çalıştırma)
+- [Proje Yapısı](#proje-yapısı)
+- [Bileşenler ve Sayfalar](#bileşenler-ve-sayfalar)
+- [Animasyon ve UI](#animasyon-ve-ui)
+- [Katkı ve Geliştirme](#katkı-ve-geliştirme)
+- [Lisans](#lisans)
+
+---
 
 ## Proje Hakkında
 
-Bu proje, modern web teknolojileri kullanılarak geliştirilmiş, ölçeklenebilir ve sürdürülebilir bir frontend mimarisi sunar. Kullanıcı dostu arayüzü, hızlı performansı ve kolay yönetilebilir yapısıyla öne çıkar.
+Bu proje, OSTİMTECH Hastanesi için kurumsal ve topluluk odaklı bir web arayüzü sunar. Amaç; etkinlikler, duyurular, profil ve başarımlar gibi modüllerle, kullanıcıların bilgiye hızlı ve modern bir şekilde ulaşmasını sağlamaktır.
 
-## Kullanılan Teknolojiler
+## Teknolojiler
 
-Aşağıdaki tablo, projede kullanılan ana teknolojileri ve ilgili ikonlarını içermektedir. İkonlar [skillicons.dev](https://skillicons.dev) üzerinden alınmıştır.
+| Teknoloji      | Açıklama                |
+|---------------|-------------------------|
+| Next.js       | React tabanlı framework |
+| TypeScript    | Tip güvenli JavaScript  |
+| Tailwind CSS  | Utility-first CSS       |
+| Redux         | State yönetimi          |
+| Framer Motion | Animasyon kütüphanesi   |
+| Iconify       | Vektör ikonlar          |
 
-| Teknoloji      | Açıklama                | İkon |
-|---------------|-------------------------|------|
-| Next.js       | React tabanlı framework | ![Next.js](https://skillicons.dev/icons?i=nextjs) |
-| TypeScript    | Tip güvenli JavaScript  | ![TypeScript](https://skillicons.dev/icons?i=typescript) |
-| Tailwind CSS  | Utility-first CSS       | ![Tailwind](https://skillicons.dev/icons?i=tailwind) |
-| Redux         | State yönetimi          | ![Redux](https://skillicons.dev/icons?i=redux) |
-| Framer Motion | Animasyon kütüphanesi   | ![Framer Motion](https://skillicons.dev/icons?i=framer) |
-
-## Kurulum
-
-Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
+## Kurulum ve Çalıştırma
 
 1. Depoyu klonlayın:
    ```bash
@@ -30,33 +43,49 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
    ```
 2. Bağımlılıkları yükleyin:
    ```bash
-   pnpm install
-   # veya
-   npm install
-   # veya
-   yarn install
+   pnpm install # veya npm/yarn
    ```
 3. Geliştirme sunucusunu başlatın:
    ```bash
-   pnpm dev
-   # veya
-   npm run dev
-   # veya
-   yarn dev
+   pnpm dev # veya npm run dev / yarn dev
    ```
-4. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açın.
+4. [http://localhost:3000](http://localhost:3000) adresini açın.
 
 ## Proje Yapısı
 
-- `pages/` : Sayfa bileşenleri ve rotalar
-- `public/` : Statik dosyalar
+- `pages/` : Tüm sayfa ve route dosyaları
+- `components/` : Tekrar kullanılabilir React bileşenleri (Button, Card, SelectBox, vb.)
+- `public/` : Statik dosyalar (görseller, favicon, vs.)
 - `styles/` : Global ve özel stiller
-- `components/` : (Varsa) Tekrar kullanılabilir React bileşenleri
 
-## Katkıda Bulunma
+## Bileşenler ve Sayfalar
 
-Katkıda bulunmak isterseniz, lütfen bir fork oluşturun ve değişikliklerinizi yeni bir dalda yaparak pull request gönderin. Her türlü geri bildirime açığız.
+- **Button**: Farklı varyantlar ve link/button desteği ile özel buton.
+- **AnnouncementCard**: Duyuru kartı, modal ile detay gösterimi.
+- **SelectBox**: Framer-motion ile animasyonlu dropdown select.
+- **ProjectCard**: Proje kartı, hover ile detay overlay.
+- **Profile**: Kullanıcı profil sayfası, başarımlar ve sosyal bilgiler.
+- **Duyurular**: Duyurular ve önemli duyurular, simülasyon ile fetch edilen veri örnekleri.
+- **Animasyonlar**: Framer Motion ile geçiş ve modal animasyonları.
+
+## Animasyon ve UI
+
+- Tüm kartlar ve dropdownlar animasyonlu, modern ve responsive.
+- Modal açılış/kapanışları, hover efektleri ve geçişler Framer Motion ile sağlanır.
+- Tasarımda font-advent-pro ve font-poppins kullanılır.
+
+## Katkı ve Geliştirme
+
+Katkıda bulunmak için:
+
+1. Fork oluşturun.
+2. Yeni bir dalda değişiklik yapın.
+3. Pull request gönderin.
+4. Her türlü geri bildirime ve katkıya açığız.
 
 ## Lisans
 
-Bu proje HSD OSTİMTECH'e aittir. Tüm hakları saklıdır.
+Bu proje HSD OSTİMTECH'e aittir. Tüm hakları saklıdır. Kullanım ve paylaşım için lütfen [LICENSE](LICENSE) dosyasını inceleyin.
+
+---
+
