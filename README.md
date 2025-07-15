@@ -21,7 +21,7 @@ Bu depo, OSTİMTECH Üniversitesi Hastanesi'nin (HSD OSTİMTECH) resmi web sites
 
 ## Proje Hakkında
 
-Bu proje, OSTİMTECH Hastanesi için kurumsal ve topluluk odaklı bir web arayüzü sunar. Amaç; etkinlikler, duyurular, profil ve başarımlar gibi modüllerle, kullanıcıların bilgiye hızlı ve modern bir şekilde ulaşmasını sağlamaktır.
+Bu proje, HSD OSTIMTECH topluluğu için kurumsal ve topluluk odaklı bir web arayüzü sunar. Amaç; etkinlikler, duyurular, profil ve başarımlar gibi modüllerle, kullanıcıların topluluk işlevlerine hızlı ve modern bir şekilde ulaşmasını sağlamaktır.
 
 ## Teknolojiler
 
