@@ -6,7 +6,7 @@ const links = [
   { 
     label: "Profil", 
     icon: "hugeicons:location-user-01", 
-    href: "/profile" 
+    href: "/settings" 
 },
   {
     label: "Hesap Güvenliği",

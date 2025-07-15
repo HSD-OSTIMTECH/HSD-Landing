@@ -49,7 +49,12 @@ const SelectBox: React.FC<SelectBoxProps> = ({ options, value, onChange, classNa
   const selected = options.find(opt => opt.value === value);
 
   return (
-    <div ref={ref} className={`relative inline-block ${className}`} style={{ width: 170 }}>
+    <div
+      ref={ref}
+      className={`relative inline-block ${className}`}
+      style={{ width: 170 }}
+      onClick={e => e.stopPropagation()}
+    >
       <button
         className="bg-black text-white rounded-full px-6 py-2 flex items-center gap-2 font-poppins text-base focus:outline-none border border-neutral-800 w-full shadow-md"
         onClick={() => setOpen((o) => !o)}
@@ -74,6 +79,7 @@ const SelectBox: React.FC<SelectBoxProps> = ({ options, value, onChange, classNa
             }`}
             style={{ width: "100%" }}
             role="listbox"
+            onMouseDown={e => e.stopPropagation()}
           >
             {options.map((opt) => (
               <li
