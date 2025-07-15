@@ -156,7 +156,7 @@ const AdminSidebar = () => {
 
       <div className="mt-auto flex flex-col gap-2">
         <a
-          href="/admin/settings"
+          href="/settings"
           className="flex items-center gap-3 px-4 py-2 rounded-lg text-white font-poppins text-base hover:bg-primary/10 transition-colors"
         >
           <Icon icon="hugeicons:settings-01" className="text-xl text-red-500" />
