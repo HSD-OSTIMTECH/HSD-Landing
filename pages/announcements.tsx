@@ -31,12 +31,14 @@ const Announcements = () => {
   return (
     <div className="my-24 max-w-7xl container mx-auto">
       <section className="flex flex-col items-start mb-24">
-        <h1 className="text-3xl sm:text-5xl md:text-7xl font-advent-pro font-semibold max-w-lg">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-advent-pro font-semibold max-w-lg">
           Önemli Duyurular
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {importantAnnouncements.length === 0 ? (
-            <div className="text-neutral-400 font-poppins text-lg">Yükleniyor...</div>
+            <div className="text-neutral-400 font-poppins text-lg">
+              Yükleniyor...
+            </div>
           ) : (
             importantAnnouncements.map((a, i) => (
               <AnnouncementCard
@@ -53,7 +55,7 @@ const Announcements = () => {
       </section>
       <section>
         <div className="flex items-center justify-between my-8 gap-4">
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-advent-pro font-semibold max-w-lg">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-advent-pro font-semibold max-w-lg">
             Duyurular
           </h1>
           <div className="flex gap-4">
