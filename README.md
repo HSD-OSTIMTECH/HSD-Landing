@@ -2,7 +2,7 @@
 
 # HSD OSTİMTECH Resmi Web Sitesi - Frontend
 
-Bu depo, OSTİMTECH Üniversitesi Hastanesi'nin (HSD OSTİMTECH) resmi web sitesinin frontend kodlarını içerir. Proje, modern web teknolojileriyle geliştirilmiş, kullanıcı dostu ve sürdürülebilir bir mimariye sahiptir.
+Bu depo, HSD OSTİMTECH resmi web sitesinin frontend kodlarını içerir. Proje, modern web teknolojileriyle geliştirilmiş, kullanıcı dostu ve sürdürülebilir bir mimariye sahiptir.
 
 ---
 
