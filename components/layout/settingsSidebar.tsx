@@ -27,7 +27,7 @@ const links = [
 
 const SettingsSidebar = () => {
   return (
-    <aside className="bg-neutral-900 rounded-2xl p-6 w-full max-w-xs shadow-lg border border-neutral-800 flex flex-col gap-6">
+    <aside className="bg-neutral-900 rounded-2xl p-6 w-full max-w-xs h-[500px] shadow-lg border border-neutral-800 flex flex-col gap-6">
       {/* Profil */}
       <div className="flex flex-col items-center gap-2 mb-2">
         <img
