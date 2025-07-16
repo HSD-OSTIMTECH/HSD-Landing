@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         isLogin={false}
         onOpenLogin={() => setShowLogin(true)}
       />
-      <main className='flex-grow'>
+      <main className='flex-grow my-24'>
         {children}
       </main>
       <Footer />
