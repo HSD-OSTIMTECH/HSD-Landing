@@ -28,7 +28,7 @@ const Navbar = ({ isLogin }: NavbarProps) => {
 
         {/* Orta Linkler (desktop only) */}
         <div className="hidden md:flex items-center gap-4">
-          <a href="/aboout" className={linkStyle}>
+          <a href="/about" className={linkStyle}>
             Hakkımızda
           </a>
           <a href="/projects" className={linkStyle}>
