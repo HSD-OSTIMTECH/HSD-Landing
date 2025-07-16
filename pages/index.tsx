@@ -7,7 +7,7 @@ import Button from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="my-24">
+    <div className="my-48">
       <section className="max-w-7xl container mx-auto flex items-center justify-between relative">
         <h1 className="text-3xl sm:text-5xl md:text-7xl font-advent-pro font-semibold max-w-lg">
           Huawei Student Developers OSTIM Teknik Üniversitesi
