@@ -40,7 +40,7 @@ const Navbar = ({ isLogin }: NavbarProps) => {
           <a href="/announcements" className={linkStyle}>
             Duyurular
           </a>
-          <a href="/announcements" className={linkStyle}>
+          <a href="/gallery" className={linkStyle}>
             Galeri
           </a>
         </div>
