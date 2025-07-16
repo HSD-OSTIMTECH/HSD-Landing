@@ -1,11 +1,13 @@
 import React, { useRef, useEffect } from 'react';
 import { Icon } from '@iconify/react';
+import { motion } from 'framer-motion';
 
 interface LoginModalProps {
     onClose: () => void;
+    onOpenRegister?: () => void;
 }
 
-const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
+const LoginModal: React.FC<LoginModalProps> = ({ onClose, onOpenRegister }) => {
     const modalRef = useRef<HTMLDivElement>(null);
 
     // Dışarı tıklayınca kapansın
@@ -21,7 +23,14 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
 
     return (
         <div className="fixed inset-0 w-full h-full flex items-center justify-center z-50 bg-black/80 backdrop-blur-xl">
-            <div ref={modalRef} className="relative bg-neutral-900 rounded-xl shadow-2xl w-full max-w-md mx-auto p-8 flex flex-col gap-4">
+            <motion.div
+                ref={modalRef}
+                className="relative bg-neutral-900 rounded-xl shadow-2xl w-full max-w-md mx-auto p-8 flex flex-col gap-4"
+                initial={{ opacity: 0, scale: 0.96, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.96, y: 30 }}
+                transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
+            >
                 {/* Çarpı butonu */}
                 <button
                     className="absolute top-4 right-4 text-neutral-400 hover:text-red-500 transition-colors"
@@ -61,10 +70,10 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose }) => {
                     <button type="submit" className="bg-primary text-white rounded-full py-2 mt-2 font-semibold text-base w-full transition-all hover:bg-primary/80">Giriş Yap</button>
                 </form>
                 <div className="flex flex-col items-center gap-1 mt-2">
-                    <span className="text-neutral-300 text-sm">Daha Kayıt Olmadın mı? <a href="#" className="text-secondary hover:underline">Hemen Kayıt Ol!</a></span>
+                    <span className="text-neutral-300 text-sm">Daha Kayıt Olmadın mı? <a href="#" className="text-secondary hover:underline" onClick={e => { e.preventDefault(); if (onOpenRegister) onOpenRegister(); }}>Hemen Kayıt Ol!</a></span>
                     <a href="#" className="text-sky-400 text-sm hover:underline">Şifreni mi unuttun?</a>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };
