@@ -14,9 +14,9 @@ const Navbar = ({ isLogin }: NavbarProps) => {
     "text-neutral-400 hover:text-white hover:bg-primary/30 hover:border hover:border-primary hover:shadow-xs hover:shadow-secondary hover:-translate-y-1 transition-all px-3 py-1 rounded-md";
 
   return (
-    <nav className="max-w-7xl container mx-auto py-8 font-poppins">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-3xl py-8 font-poppins">
       {/* ÜST BAR */}
-      <div className="flex items-center justify-between">
+      <div className="max-w-7xl container mx-auto flex items-center justify-between">
         {/* Logo */}
         <a href="/">
           <img
@@ -87,9 +87,9 @@ const Navbar = ({ isLogin }: NavbarProps) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="absolute left-4 right-4 top-16 z-50 mt-3 flex flex-col gap-2 bg-black/40 backdrop-blur-xl border border-neutral-800 p-4 rounded-xl shadow-lg md:hidden"
+            className="absolute left-4 right-4 top-16 z-50 mt-3 flex flex-col gap-2 bg-black/90 backdrop-blur-2xl border border-neutral-800 p-4 rounded-xl shadow-lg md:hidden"
           >
-            <a href="/aboout" className={linkStyle}>
+            <a href="/about" className={linkStyle}>
               Hakkımızda
             </a>
             <a href="/projects" className={linkStyle}>
@@ -101,7 +101,7 @@ const Navbar = ({ isLogin }: NavbarProps) => {
             <a href="/announcements" className={linkStyle}>
               Duyurular
             </a>
-            <a href="/announcements" className={linkStyle}>
+            <a href="/gallery" className={linkStyle}>
               Galeri
             </a>
 
