@@ -124,12 +124,15 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onOpenLogin }) =
                 {step === 2 && (
                     <div
                         key="step2"
-                        className="flex flex-col gap-4 items-center justify-center"
+                        className="flex flex-col gap-4 sm:gap-6 items-center justify-center w-full"
                     >
-                        <img src="/avatars/defaultAvatar.png" alt="Avatar" className="w-32 h-32 rounded-full object-cover mx-auto mb-2" />
-                        <p className="text-white text-lg font-semibold text-center">Hoşgeldin, {form.name || 'Üye'}!</p>
-                        <p className="text-neutral-400 text-center text-sm mb-2">Bilgilerin başarıyla kaydedildi. Şimdi e-posta ve şifre belirle!</p>
-                        <form className="flex flex-col gap-4 w-full" onSubmit={e => { e.preventDefault(); setStep(3); }}>
+                        {/* Sadece sm ve üstü ekranlarda avatar ve mesajlar gösterilsin */}
+                        <div className="hidden sm:flex flex-col items-center w-full">
+                            <img src="/avatars/defaultAvatar.png" alt="Avatar" className="w-32 h-32 rounded-full object-cover mx-auto mb-2" />
+                            <p className="text-white text-lg font-semibold text-center">Hoşgeldin, {form.name || 'Üye'}!</p>
+                            <p className="text-neutral-400 text-center text-sm mb-2">Bilgilerin başarıyla kaydedildi. Şimdi e-posta ve şifre belirle!</p>
+                        </div>
+                        <form className="flex flex-col gap-3 sm:gap-4 w-full" onSubmit={e => { e.preventDefault(); setStep(3); }}>
                             <div className="flex flex-col gap-1">
                                 <label htmlFor="email" className="text-white text-sm">E-posta</label>
                                 <input
@@ -177,11 +180,11 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onOpenLogin }) =
                 {step === 3 && (
                     <div
                         key="step3"
-                        className="flex flex-col gap-6 items-center justify-center"
+                        className="flex flex-col gap-4 sm:gap-6 items-center justify-center w-full"
                     >
                         <p className="text-white text-lg font-semibold text-center">Mail adresinize gelen kodu giriniz</p>
-                        <form className="flex flex-col gap-4 w-full items-center" onSubmit={e => { e.preventDefault(); /* kod doğrulama işlemi */ }}>
-                            <div className="flex gap-2 justify-center">
+                        <form className="flex flex-col gap-3 sm:gap-4 w-full items-center" onSubmit={e => { e.preventDefault(); /* kod doğrulama işlemi */ }}>
+                            <div className="flex gap-2 justify-center w-full">
                                 {code.map((c, idx) => (
                                     <input
                                         key={idx}
@@ -189,7 +192,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ onClose, onOpenLogin }) =
                                         type="text"
                                         inputMode="numeric"
                                         maxLength={1}
-                                        className="w-10 h-12 text-2xl text-center bg-transparent border border-neutral-700 rounded-lg text-white focus:outline-none focus:border-primary"
+                                        className="w-10 h-12 sm:w-12 sm:h-14 text-2xl text-center bg-transparent border border-neutral-700 rounded-lg text-white focus:outline-none focus:border-primary"
                                         value={c}
                                         onChange={e => handleCodeChange(e, idx)}
                                     />
