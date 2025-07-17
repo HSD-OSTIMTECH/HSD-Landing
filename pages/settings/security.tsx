@@ -7,7 +7,7 @@ const Security = () => {
   const [loginAlerts, setLoginAlerts] = useState(false);
 
   return (
-    <div className="w-full max-w-lg bg-neutral-900 rounded-2xl shadow-xl border border-neutral-800 p-8 flex flex-col gap-8">
+    <div className="w-full max-w-lg bg-neutral-900 rounded-2xl shadow-xl border border-neutral-800 p-4 sm:p-8 flex flex-col gap-6 sm:gap-8 mx-auto">
       <div>
         <h2 className="text-xl font-semibold text-white mb-2">
           Şifre Değişikliği

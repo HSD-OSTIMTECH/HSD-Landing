@@ -29,12 +29,12 @@ const Announcements = () => {
   }, []);
 
   return (
-    <div className="my-24 max-w-7xl container mx-auto">
-      <section className="flex flex-col items-start mb-24">
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-advent-pro font-semibold max-w-lg">
+    <div className="my-24 max-w-7xl container mx-auto px-2 sm:px-4">
+      <section className="flex flex-col items-start mb-24 w-full">
+        <h1 className="text-2xl md:text-3xl font-advent-pro font-semibold max-w-lg">
           Önemli Duyurular
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mt-8 w-full">
           {importantAnnouncements.length === 0 ? (
             <div className="text-neutral-400 font-poppins text-lg">
               Yükleniyor...
@@ -54,11 +54,11 @@ const Announcements = () => {
         </div>
       </section>
       <section>
-        <div className="flex items-center justify-between my-8 gap-4">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-advent-pro font-semibold max-w-lg">
+        <div className="flex flex-col md:flex-row items-center justify-between my-8 gap-4 w-full">
+          <h1 className="text-2xl md:text-3xl font-advent-pro font-semibold max-w-lg text-center md:text-left w-full md:w-auto">
             Duyurular
           </h1>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto mt-4 md:mt-0 items-center justify-center md:justify-end">
             <SelectBox
               options={[
                 { label: "04 / 06 / 2025", value: "2025-06-04" },
@@ -80,7 +80,7 @@ const Announcements = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
           <AnnouncementCard
             title="2025 HSD OSTIMTECH HACKATHON Kontejanları Hakkında Ve Süreç Hakkında"
             author="Poyraz Avsever"
