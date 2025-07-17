@@ -103,9 +103,9 @@ const ProjectsIndex = () => {
   }, [current, autoPlay]);
 
   return (
-    <div className="mt-24">
+    <div className="mt-4 sm:mt-24">
       <section className="relative w-full flex flex-col items-center justify-center">
-        <div className="rounded-t-full absolute -z-20 bottom-0 w-7/12 h-[50vh] bg-gradient-to-br from-primary to-secondary" />
+        <div className="rounded-t-full absolute -z-20 bottom-0 w-11/12 sm:w-7/12 h-[50vh] bg-gradient-to-br from-primary to-secondary" />
 
         <div className="absolute w-full bottom-8 flex items-center justify-center gap-3 z-30">
           <Button
@@ -150,7 +150,7 @@ const ProjectsIndex = () => {
 
       <section className="flex flex-col items-center justify-center w-full">
         <div className="py-8 bg-gray w-full">
-          <div className="max-w-7xl container mx-auto flex gap-8">
+          <div className="max-w-7xl container mx-auto flex flex-wrap gap-4 sm:gap-6 md:gap-8 justify-center px-5 ">
             {categories.map((cat) => (
               <ProjectCategoryCard
                 key={cat.key}
@@ -165,12 +165,12 @@ const ProjectsIndex = () => {
           </div>
         </div>
 
-        <div className="my-12 max-w-7xl container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
+        <div className="my-12 max-w-7xl container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full px-2">
           {(projects[selectedCategory] as Array<any>).map(
             (project: any, idx: number) => (
               <div
                 key={idx}
-                className="w-full flex items-center justify-center"
+                className="w-full flex items-center justify-center px-5 "
               >
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
