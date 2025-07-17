@@ -33,7 +33,7 @@ const Navbar = ({ isLogin, onOpenLogin }: NavbarProps) => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-3xl py-8 font-poppins">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-3xl py-8 font-poppins px-5 sm:px-0">
         {/* ÜST BAR */}
         <div className="max-w-7xl container mx-auto flex items-center justify-between">
           {/* Logo */}
