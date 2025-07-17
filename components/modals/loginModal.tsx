@@ -71,7 +71,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose, onOpenRegister }) => {
                 </form>
                 <div className="flex flex-col items-center gap-1 mt-2">
                     <span className="text-neutral-300 text-sm">Daha Kayıt Olmadın mı? <a href="#" className="text-secondary hover:underline" onClick={e => { e.preventDefault(); if (onOpenRegister) onOpenRegister(); }}>Hemen Kayıt Ol!</a></span>
-                    <a href="#" className="text-sky-400 text-sm hover:underline">Şifreni mi unuttun?</a>
+                    <a href="/forgot-password" className="text-sky-400 text-sm hover:underline">Şifreni mi unuttun?</a>
                 </div>
             </motion.div>
         </div>
