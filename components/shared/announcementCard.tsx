@@ -23,7 +23,7 @@ const AnnouncementCard: React.FC<AnnouncementCardProps> = ({
   return (
     <>
       <div className="bg-gray rounded-2xl p-4 w-full max-w-xl border border-neutral-800">
-        <div className="bg-black h-full rounded-xl p-6 flex flex-col justify-between">
+        <div className="bg-black h-full rounded-xl p-4 sm:p-6 flex flex-col justify-between">
           <h2 className="font-advent-pro font-semibold text-white text-2xl md:text-3xl mb-4 leading-snug">
             {title}
           </h2>
@@ -33,15 +33,13 @@ const AnnouncementCard: React.FC<AnnouncementCardProps> = ({
               <span>{author}</span>
             </div>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex gap-4 font-poppins text-neutral-400 text-base">
               <span>
-                {" "}
-                <span className="font-semibold">Tarih:</span> {date}{" "}
+                <span className="font-semibold">Tarih:</span> {date}
               </span>
               <span>
-                {" "}
-                <span className="font-semibold">Saat:</span> {time}{" "}
+                <span className="font-semibold">Saat:</span> {time}
               </span>
             </div>
             <Button variant="primary" onClick={() => setShowModal(true)}>
@@ -60,7 +58,7 @@ const AnnouncementCard: React.FC<AnnouncementCardProps> = ({
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-gray rounded-2xl p-6 max-w-lg w-full border border-neutral-800 shadow-lg relative"
+              className="bg-gray rounded-2xl p-4 sm:p-6 max-w-lg w-full border border-neutral-800 shadow-lg relative"
               initial={{ scale: 0.9, y: 40, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.9, y: 40, opacity: 0 }}
