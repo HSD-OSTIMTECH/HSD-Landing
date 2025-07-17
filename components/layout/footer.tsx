@@ -26,38 +26,36 @@ const Footer = () => {
         <div>
           <h3 className="text-base font-semibold mb-2">Etkinlikler</h3>
           <ul className="space-y-1">
-            <li>Etkinlikler</li>
-            <li>Duyurular</li>
+            <li><a href="/events" className="hover:underline">Etkinlikler</a></li>
+            <li><a href="/announcements" className="hover:underline">Duyurular</a></li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-base font-semibold mb-2">Bilgi Al</h3>
           <ul className="space-y-1">
-            <li>SSS</li>
-            <li>Blog</li>
-            <li>Destek</li>
+            <li><a href="/faq" className="hover:underline">SSS</a></li>
+            <li><a href="/contact" className="hover:underline">İletişime Geç</a></li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-base font-semibold mb-2">Topluluk</h3>
           <ul className="space-y-1">
-            <li>Hakkımızda</li>
-            <li>Core Team</li>
-            <li>İletişime Geç</li>
+            <li><a href="/about" className="hover:underline">Hakkımızda</a></li>
+            <li><a href="/projects" className="hover:underline">Projelerimiz</a></li>
           </ul>
         </div>
 
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between border-t border-gray">
-        
+
         <span className="text-xs md:text-sm">© 2025 Tüm Haklar Saklıdır</span>
         <div className="flex gap-4 my-2 md:my-0">
-          <a href="#" className="text-xs md:text-sm">Terms</a>
-          <a href="#" className="text-xs md:text-sm">Privacy</a>
-          <a href="#" className="text-xs md:text-sm">Cookies</a>
+          <a href="/terms" className="text-xs md:text-sm hover:underline">Terms</a>
+          <a href="/privacy" className="text-xs md:text-sm hover:underline">Privacy</a>
+          <a href="/cookies" className="text-xs md:text-sm hover:underline">Cookies</a>
         </div>
         <div className="flex gap-3">
           <a href="#" aria-label="Instagram">
