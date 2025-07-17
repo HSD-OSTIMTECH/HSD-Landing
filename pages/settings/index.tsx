@@ -45,8 +45,8 @@ const Settings = () => {
   };
 
   return (
-    <div className="flex items-start w-full min-h-[70vh]">
-      <div className="w-full max-w-2xl bg-neutral-900 rounded-2xl shadow-xl border border-neutral-800 overflow-hidden flex flex-col">
+    <div className="flex flex-col items-start w-full min-h-[70vh] px-2 sm:px-4">
+      <div className="w-full max-w-2xl bg-neutral-900 rounded-2xl shadow-xl border border-neutral-800 overflow-hidden flex flex-col mx-auto">
         {/* Banner */}
         <div className="relative w-full h-40 bg-neutral-800">
           <img

@@ -6,7 +6,7 @@ const Notifications = () => {
   const [appNotif, setAppNotif] = useState(true);
 
   return (
-    <div className="w-full max-w-lg bg-neutral-900 rounded-2xl shadow-xl border border-neutral-800 p-8 flex flex-col gap-8">
+    <div className="w-full max-w-lg bg-neutral-900 rounded-2xl shadow-xl border border-neutral-800 p-4 sm:p-8 flex flex-col gap-6 sm:gap-8 mx-auto">
       <h2 className="text-xl font-semibold text-white mb-4">Bildirim Ayarları</h2>
       <div className="flex flex-col gap-6">
         <label className="flex items-center gap-3 cursor-pointer">
