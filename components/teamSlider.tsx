@@ -27,12 +27,12 @@ const TeamSlider = () => {
     return (
         <section
             ref={sliderRef}
-            className="flex gap-4 overflow-x-auto scroll-smooth whitespace-nowrap px-4 py-6 scrollbar-hide"
+            className="flex gap-6 overflow-x-auto scroll-smooth whitespace-nowrap px-2 sm:px-4 py-4 sm:py-6 scrollbar-hide min-h-[220px]"
         >
             {Array.from({ length: 10 }).map((_, i) => (
                 <div
                     key={i}
-                    className="inline-block"
+                    className="inline-block w-48 sm:w-60 md:w-72 flex-shrink-0 mx-0"
                     onMouseEnter={() => setIsHovering(true)}
                     onMouseLeave={() => setIsHovering(false)}
                 >
