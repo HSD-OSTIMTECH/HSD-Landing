@@ -24,7 +24,7 @@ const galleryItems = [
 
 const Gallery = () => {
     return (
-        <div className='my-24 max-w-7xl container mx-auto flex flex-col items-start gap-6'>
+        <div className='px-5 sm:px-0 my-24 max-w-7xl container mx-auto flex flex-col items-start gap-6'>
             <h1 className="text-xl sm:text-2xl md:text-3xl font-advent-pro font-semibold max-w-lg">
                 HSD OSTIMTECH'den <span className='text-primary'>Kareler</span>
             </h1>
