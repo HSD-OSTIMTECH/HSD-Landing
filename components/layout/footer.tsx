@@ -53,9 +53,9 @@ const Footer = () => {
 
         <span className="text-xs md:text-sm">© 2025 Tüm Haklar Saklıdır</span>
         <div className="flex gap-4 my-2 md:my-0">
-          <a href="/terms" className="text-xs md:text-sm hover:underline">Terms</a>
-          <a href="/privacy" className="text-xs md:text-sm hover:underline">Privacy</a>
-          <a href="/cookies" className="text-xs md:text-sm hover:underline">Cookies</a>
+          <a href="/terms" className="text-xs md:text-sm hover:underline">Kullanım Şartları</a>
+          <a href="/privacy" className="text-xs md:text-sm hover:underline">Gizlilik</a>
+          <a href="/cookies" className="text-xs md:text-sm hover:underline">Çerezler</a>
         </div>
         <div className="flex gap-3">
           <a href="#" aria-label="Instagram">
