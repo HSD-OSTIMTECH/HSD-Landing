@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Button from "../../components/ui/button";
 import ProjectCategoryCard from "../../components/shared/projectCategoryCard";
 import ProjectCard from "../../components/shared/projectCard";
+import SelectBox from "../../components/ui/selectBox";
 
 const images = ["/avatars/poyraz.png", "/avatars/yigit.png"];
 
@@ -11,22 +12,18 @@ const categories = [
   {
     key: "uiux",
     title: "UI/UX Tasarım",
-    imageUrl: "/images/defaultImage.png",
   },
   {
     key: "web",
     title: "Web Uygulamaları",
-    imageUrl: "/images/defaultImage.png",
   },
   {
     key: "mobile",
     title: "Mobil Uygulamalar",
-    imageUrl: "/images/defaultImage.png",
   },
   {
     key: "sosyal",
     title: "Farkındalık Projeleri",
-    imageUrl: "/images/defaultImage.png",
   },
 ];
 
@@ -90,7 +87,7 @@ const ProjectsIndex = () => {
   const [current, setCurrent] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<
-    "uiux" | "web" | "mobile"
+    "uiux" | "web" | "mobile" | "sosyal"
   >("uiux");
 
   useEffect(() => {
@@ -148,23 +145,72 @@ const ProjectsIndex = () => {
       </section>
 
       <section className="flex flex-col items-center justify-center w-full">
-        <div className="py-8 bg-gray w-full">
-          <div className="max-w-7xl container mx-auto flex flex-wrap md:flex-nowrap gap-4 sm:gap-6 md:gap-8 justify-center px-5 ">
-            {categories.map((cat) => (
-              <ProjectCategoryCard
-                key={cat.key}
-                title={cat.title}
-                imageUrl={cat.imageUrl}
-                isSelected={selectedCategory === cat.key}
-                onClick={() =>
-                  setSelectedCategory(cat.key as "uiux" | "web" | "mobile")
-                }
-              />
-            ))}
+        <div className="py-12 bg-neutral-950/50 w-full">
+          <div className="max-w-7xl container mx-auto px-5">
+            {/* Başlık */}
+            <div className="text-center mb-8 ">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                Proje Kategorileri
+              </h2>
+              <p className="text-neutral-400">
+                İlgilendiğiniz alanda projelerimizi keşfedin
+              </p>
+            </div>
+
+            {/* Desktop: Kategori Kartları */}
+            <motion.div
+              className="hidden md:flex items-center justify-between gap-3 sm:gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              {categories.map((cat) => (
+                <ProjectCategoryCard
+                  key={cat.key}
+                  title={cat.title}
+                  isSelected={selectedCategory === cat.key}
+                  onClick={() =>
+                    setSelectedCategory(
+                      cat.key as "uiux" | "web" | "mobile" | "sosyal"
+                    )
+                  }
+                />
+              ))}
+            </motion.div>
+
+            {/* Mobile: Select Box */}
+            <motion.div
+              className="flex md:hidden justify-center w-full"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              <div className="w-full max-w-xs">
+                <SelectBox
+                  options={categories.map((cat) => ({
+                    label: `${cat.title}`,
+                    value: cat.key,
+                  }))}
+                  value={selectedCategory}
+                  onChange={(value) =>
+                    setSelectedCategory(
+                      value as "uiux" | "web" | "mobile" | "sosyal"
+                    )
+                  }
+                  className="!w-full"
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
 
-        <div className="my-12 max-w-7xl container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full px-2">
+        <motion.div
+          className="my-12 max-w-7xl container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full px-2"
+          key={selectedCategory}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           {(projects[selectedCategory] as Array<any>).map(
             (project: any, idx: number) => (
               <div
@@ -174,7 +220,7 @@ const ProjectsIndex = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.1 }}
+                  transition={{ delay: idx * 0.1, duration: 0.4 }}
                   className="w-full flex items-center justify-center"
                 >
                   <ProjectCard
@@ -188,7 +234,7 @@ const ProjectsIndex = () => {
               </div>
             )
           )}
-        </div>
+        </motion.div>
       </section>
     </div>
   );
