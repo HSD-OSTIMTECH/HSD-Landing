@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Button from "../ui/button";
 import { Icon } from "@iconify/react";
@@ -83,7 +82,9 @@ const Navbar = ({ isLogin, onOpenLogin }: NavbarProps) => {
                 </a>
               </div>
             ) : (
-              <Button variant="outline" onClick={onOpenLogin}>Giriş Yap</Button>
+              <Button variant="outline" onClick={onOpenLogin}>
+                Giriş Yap
+              </Button>
             )}
           </div>
 
@@ -106,7 +107,7 @@ const Navbar = ({ isLogin, onOpenLogin }: NavbarProps) => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.25 }}
-              className="absolute left-4 right-4 top-16 z-50 mt-3 flex flex-col gap-2 bg-black/90 backdrop-blur-2xl border border-neutral-800 p-4 rounded-xl shadow-lg md:hidden"
+              className="fixed inset-0 top-20 z-50 flex flex-col gap-4 bg-black h-screen w-screen backdrop-blur-2xl p-6 md:hidden"
             >
               <a href="/about" className={linkStyle}>
                 Hakkımızda
@@ -125,7 +126,7 @@ const Navbar = ({ isLogin, onOpenLogin }: NavbarProps) => {
               </a>
 
               {isLogin ? (
-                <div className="flex items-center justify-between mt-3 px-1">
+                <div className="flex items-center justify-between mt-6 px-1">
                   <a href="/settings">
                     <Icon
                       icon="hugeicons:setting-07"
@@ -141,7 +142,11 @@ const Navbar = ({ isLogin, onOpenLogin }: NavbarProps) => {
                   </a>
                 </div>
               ) : (
-                <Button variant="outline" className="w-full mt-3" onClick={onOpenLogin}>
+                <Button
+                  variant="outline"
+                  className="w-full mt-6"
+                  onClick={onOpenLogin}
+                >
                   Giriş Yap
                 </Button>
               )}
@@ -165,13 +170,16 @@ const Navbar = ({ isLogin, onOpenLogin }: NavbarProps) => {
             </LoginModal>
             {/* Hemen Kayıt Ol linkini override etmek için portal benzeri bir çözüm: */}
             <style>{`.login-modal-register-link { cursor:pointer; color: #e11d48; font-weight:600; }`}</style>
-            <script dangerouslySetInnerHTML={{
-              __html: `
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
               setTimeout(() => {
                 const link = document.querySelector('.login-modal-register-link');
                 if(link){ link.onclick = ${handleOpenRegister.toString()}; }
               }, 100);
-            `}} />
+            `,
+              }}
+            />
           </motion.div>
         )}
       </AnimatePresence>
@@ -188,13 +196,16 @@ const Navbar = ({ isLogin, onOpenLogin }: NavbarProps) => {
             <RegisterModal onClose={() => setShowRegister(false)} />
             {/* Hemen Giriş Yap linkini override etmek için portal benzeri bir çözüm: */}
             <style>{`.register-modal-login-link { cursor:pointer; color: #2563eb; font-weight:600; }`}</style>
-            <script dangerouslySetInnerHTML={{
-              __html: `
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
               setTimeout(() => {
                 const link = document.querySelector('.register-modal-login-link');
                 if(link){ link.onclick = ${handleOpenLogin.toString()}; }
               }, 100);
-            `}} />
+            `,
+              }}
+            />
           </motion.div>
         )}
       </AnimatePresence>
