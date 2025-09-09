@@ -1,13 +1,10 @@
-
-
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Button from '../../components/ui/button';
-import ProjectCategoryCard from '../../components/shared/projectCategoryCard';
-import ProjectCard from '../../components/shared/projectCard';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Button from "../../components/ui/button";
+import ProjectCategoryCard from "../../components/shared/projectCategoryCard";
+import ProjectCard from "../../components/shared/projectCard";
 
 const images = ["/avatars/poyraz.png", "/avatars/yigit.png"];
-
 
 // Category and project data outside component for cleaner code
 const categories = [
@@ -92,13 +89,15 @@ const projects = {
 const ProjectsIndex = () => {
   const [current, setCurrent] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<'uiux' | 'web' | 'mobile'>('uiux');
+  const [selectedCategory, setSelectedCategory] = useState<
+    "uiux" | "web" | "mobile"
+  >("uiux");
 
   useEffect(() => {
     if (!autoPlay) return;
     const timer = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    },3000);
+    }, 3000);
     return () => clearTimeout(timer);
   }, [current, autoPlay]);
 
@@ -150,7 +149,7 @@ const ProjectsIndex = () => {
 
       <section className="flex flex-col items-center justify-center w-full">
         <div className="py-8 bg-gray w-full">
-          <div className="max-w-7xl container mx-auto flex flex-wrap gap-4 sm:gap-6 md:gap-8 justify-center px-5 ">
+          <div className="max-w-7xl container mx-auto flex flex-wrap md:flex-nowrap gap-4 sm:gap-6 md:gap-8 justify-center px-5 ">
             {categories.map((cat) => (
               <ProjectCategoryCard
                 key={cat.key}
