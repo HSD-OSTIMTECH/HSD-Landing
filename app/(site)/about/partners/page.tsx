@@ -6,16 +6,27 @@ const Partners = () => {
   const partners = [
     {
       id: 1,
-      name: "OSTIM",
       logo: "/partners/ostim.png",
-      description:
-        "Türkiye'nin en büyük sanayi sitelerinden biri olan OSTIM ile stratejik ortaklığımız",
+      name: "Ostim Teknik Üniversitesi",
+      href: "https://ostimteknik.edu.tr",
     },
     {
       id: 2,
-      name: "Teknopark",
       logo: "/partners/teknopark.png",
-      description: "Teknoloji ve inovasyon alanında güçlü işbirliğimiz",
+      name: "Ostim Teknopark",
+      href: "https://ostimteknopark.com.tr",
+    },
+    {
+      id: 3,  
+      logo: "/partners/hsd.png",
+      name: "Huawei HSD Programı",
+      href: "https://developer.huawei.com/consumer/en/programs/hsd/",
+    },
+    {
+      id: 4,
+      logo: "/partners/ostimsanayi.png",
+      name: "Ostim Sanayi Bölgesi",
+      href: "https://www.ostim.org.tr/",
     },
   ];
 
