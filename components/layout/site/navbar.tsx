@@ -30,6 +30,7 @@ const Navbar = ({ isLogin }: NavbarProps) => {
         { href: "/about/team", text: "Yönetim Kadrosu" },
         { href: "/about/achievements", text: "Başarılarımız" },
         { href: "/about/partners", text: "Destekçilerimiz" },
+        { href: "/about/faq", text: "Sıkça Sorulan Sorular" },
         { href: "/about/careers", text: "Ekip Katılım Başvurusu" },
       ],
       cards: [
