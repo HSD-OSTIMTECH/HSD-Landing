@@ -216,17 +216,6 @@ const Navbar = ({ isLogin, onOpenLogin }: NavbarProps) => {
           extraIcon: "mdi:account-group",
         },
         {
-          title: "Mentörlük Programı",
-          description:
-            "Deneyimli geliştiricilerden 1:1 mentörlük alın veya mentor olarak deneyiminizi paylaşın.",
-          gradient: "from-amber-900/50 to-orange-900/50",
-          icon: "mdi:school",
-          iconColor: "text-amber-400",
-          badge: { text: "Başvuru Açık", color: "bg-amber-600" },
-          extra: "25 mentor",
-          extraIcon: "mdi:account-star",
-        },
-        {
           title: "Open Source Katkıları",
           description:
             "GitHub'da open source projelere katkıda bulunun. Deneyim kazanın ve portfolyonuzu güçlendirin.",
