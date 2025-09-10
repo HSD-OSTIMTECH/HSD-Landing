@@ -25,8 +25,8 @@ const Navbar = ({ isLogin }: NavbarProps) => {
     about: {
       title: "Hakkımızda",
       links: [
-        { href: "/about", text: "Biz Kimiz" },
-        { href: "/about/hsd", text: "HSD Nedir" },
+        { href: "/about", text: "Biz Kimiz?" },
+        { href: "/about/hsd", text: "HSD Nedir?" },
         { href: "/about/team", text: "Yönetim Kadrosu" },
         { href: "/about/achievements", text: "Başarılarımız" },
         { href: "/about/partners", text: "Destekçilerimiz" },
