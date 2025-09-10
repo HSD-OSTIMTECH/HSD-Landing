@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body>
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-screen flex-col overflox-x-hidden">
           <Navbar isLogin={false} />
           <main className="flex-grow">{children}</main>
           <Footer />
