@@ -1,5 +1,10 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import {
+  navigationData,
+  socialMediaLinks,
+  legalLinks,
+} from "@/data/navigationData";
 
 const Footer = () => {
   return (
@@ -25,46 +30,16 @@ const Footer = () => {
                   Hakkımızda
                 </h5>
                 <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="/about/vision"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Vizyonumuz & Misyonumuz
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/about/team"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Yönetim Kadrosu
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/about/achievements"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Başarılarımız
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/about/partners"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Destekçilerimiz
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/about/careers"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Ekip Katılım Başvurusu
-                    </a>
-                  </li>
+                  {navigationData.about.links.map((link, index) => (
+                    <li key={index}>
+                      <a
+                        href={link.href}
+                        className="text-neutral-400 hover:text-white transition-colors"
+                      >
+                        {link.text}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
@@ -73,38 +48,16 @@ const Footer = () => {
                   Projeler
                 </h5>
                 <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="/projects/ongoing"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Devam Eden Projeler
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/projects/completed"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Tamamlanan Projeler
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/projects/apply"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Proje Katılma Başvurusu
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/projects/mentors"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Mentorlar & Danışmanlar
-                    </a>
-                  </li>
+                  {navigationData.projects.links.slice(0, 6).map((link, index) => (
+                    <li key={index}>
+                      <a
+                        href={link.href}
+                        className="text-neutral-400 hover:text-white transition-colors"
+                      >
+                        {link.text}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -118,38 +71,16 @@ const Footer = () => {
                   Etkinlikler
                 </h5>
                 <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="/events/upcoming"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Yaklaşan Etkinlikler
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/events/workshops"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Workshop & Seminerler
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/events/hackathons"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Hackathonlar
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/events/meetups"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Topluluk Buluşmaları
-                    </a>
-                  </li>
+                  {navigationData.announcements.links.slice(0, 6).map((link, index) => (
+                    <li key={index}>
+                      <a
+                        href={link.href}
+                        className="text-neutral-400 hover:text-white transition-colors"
+                      >
+                        {link.text}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
@@ -158,38 +89,16 @@ const Footer = () => {
                   Topluluk
                 </h5>
                 <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="/community/github"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      GitHub Organizasyonu
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/community/linkedin"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      LinkedIn Grubumuz
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/community/study-groups"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Çalışma Grupları
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/gallery"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Galeri
-                    </a>
-                  </li>
+                  {navigationData.community.links.slice(0, 4).map((link, index) => (
+                    <li key={index}>
+                      <a
+                        href={link.href}
+                        className="text-neutral-400 hover:text-white transition-colors"
+                      >
+                        {link.text}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
@@ -198,38 +107,16 @@ const Footer = () => {
                   Blog & İçerik
                 </h5>
                 <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="/blog/tech"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Teknoloji Yazıları
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/blog/medium"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Medium Yazılarımız
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/blog/tutorials"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Tutorials & Rehberler
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/blog/career"
-                      className="text-neutral-400 hover:text-white transition-colors"
-                    >
-                      Kariyer Tavsiyeleri
-                    </a>
-                  </li>
+                  {navigationData.blog.links.slice(0, 4).map((link, index) => (
+                    <li key={index}>
+                      <a
+                        href={link.href}
+                        className="text-neutral-400 hover:text-white transition-colors"
+                      >
+                        {link.text}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -248,24 +135,15 @@ const Footer = () => {
 
             {/* Yasal Linkler */}
             <div className="flex gap-6 text-sm">
-              <a
-                href="/policy/privacy"
-                className="text-neutral-400 hover:text-white transition-colors"
-              >
-                Gizlilik Politikası
-              </a>
-              <a
-                href="/policy/terms"
-                className="text-neutral-400 hover:text-white transition-colors"
-              >
-                Kullanım Şartları
-              </a>
-              <a
-                href="/policy/cookies"
-                className="text-neutral-400 hover:text-white transition-colors"
-              >
-                Çerez Politikası
-              </a>
+              {legalLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  className="text-neutral-400 hover:text-white transition-colors"
+                >
+                  {link.text}
+                </a>
+              ))}
             </div>
 
             {/* Sosyal Medya */}
