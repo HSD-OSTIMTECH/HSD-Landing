@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import Button from "../ui/button";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
-import LoginModal from "../modals/loginModal";
-import RegisterModal from "../modals/registerModal";
 
 interface NavbarProps {
   isLogin: boolean;
