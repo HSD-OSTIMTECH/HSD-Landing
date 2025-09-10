@@ -2,6 +2,7 @@ import React from 'react'
 
 import HeroSection from '@/components/futures/home/heroSection'
 import LogoLoopSection from '@/components/futures/home/logoLoopSection'
+import ApplicationCta from '@/components/futures/home/application'
 
 
 const HomePage = () => {
@@ -9,6 +10,7 @@ const HomePage = () => {
     <div>
       <HeroSection />
       <LogoLoopSection />
+      <ApplicationCta />
     </div>
   )
 }
