@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Button from "../ui/button";
+import Button from "../../ui/button";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface NavbarProps {
   isLogin: boolean;
-  onOpenLogin?: () => void;
 }
 
-const Navbar = ({ isLogin, onOpenLogin }: NavbarProps) => {
+const Navbar = ({ isLogin }: NavbarProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [projectsDropdownOpen, setProjectsDropdownOpen] = useState(false);
