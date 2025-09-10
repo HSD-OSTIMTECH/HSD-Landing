@@ -37,10 +37,13 @@ export default function Button({
 
   if (as === 'link' && href) {
     return (
-      <Link href={href} legacyBehavior>
-        <a className={classes} aria-disabled={disabled} tabIndex={disabled ? -1 : 0}>
-          {children}
-        </a>
+      <Link
+        href={href}
+        className={classes}
+        aria-disabled={disabled}
+        tabIndex={disabled ? -1 : 0}
+      >
+        {children}
       </Link>
     );
   }
