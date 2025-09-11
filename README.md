@@ -1,5 +1,5 @@
 <div align="center">
-   <img src="/images/logo.png" alt="HSD OSTİMTECH Logo" width="120" height="120" />
+   <img src="public/images/logo.png" alt="HSD OSTİMTECH Logo" width="120" height="120" />
    <h1>HSD OSTİMTECH Resmi Web Sitesi — Frontend</h1>
    <p>Modern, hızlı ve ölçeklenebilir topluluk web sitesi.</p>
    <p>
