@@ -1,4 +1,17 @@
-# HSD OSTİMTECH Resmi Web Sitesi - Frontend
+<div align="center">
+   <img src="/images/logo.png" alt="HSD OSTİMTECH Logo" width="120" height="120" />
+   <h1>HSD OSTİMTECH Resmi Web Sitesi — Frontend</h1>
+   <p>Modern, hızlı ve ölçeklenebilir topluluk web sitesi.</p>
+   <p>
+      <img alt="Next.js" src="https://img.shields.io/badge/Next.js-15-black?logo=nextdotjs&logoColor=white" />
+      <img alt="React" src="https://img.shields.io/badge/React-19-20232a?logo=react&logoColor=61dafb" />
+      <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white" />
+      <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-4-06b6d4?logo=tailwindcss&logoColor=white" />
+      <img alt="Framer Motion" src="https://img.shields.io/badge/Framer%20Motion-12-111?logo=framer&logoColor=white" />
+      <img alt="Iconify" src="https://img.shields.io/badge/Iconify-6-1769aa?logo=iconify&logoColor=white" />
+      <img alt="date‑fns" src="https://img.shields.io/badge/date--fns-4-3e7ad8?logo=javascript&logoColor=white" />
+   </p>
+</div>
 
 Bu depo, HSD OSTİMTECH (Huawei Student Developers Ostim Teknik Üniversitesi) resmi web sitesinin frontend kodlarını içermektedir. Proje, modern web teknolojileriyle geliştirilmiş, kullanıcı dostu ve sürdürülebilir bir mimariye sahiptir.
 
@@ -18,6 +31,7 @@ Bu depo, HSD OSTİMTECH (Huawei Student Developers Ostim Teknik Üniversitesi) r
 - [Routing Yapısı](#routing-yapısı)
 - [Katkı ve Geliştirme](#katkı-ve-geliştirme)
 - [Lisans](#lisans)
+- [Planlama ve Yol Haritası](#planlama-ve-yol-haritası)
 
 ---
 
@@ -359,3 +373,15 @@ Detaylı bilgi için [LICENSE](LICENSE) dosyasını inceleyin.
 ---
 
 _Bu dokümantasyon sürekli güncellenmektedir. Son güncellemeler için repository'yi takip edin._
+
+---
+
+## Planlama ve Yol Haritası
+
+Projenin MVP kapsamı, tam sürüm hedefleri ve zaman çizelgesi detayları için yol haritasını inceleyin:
+
+- Plan dokümanı: [Plan.md](./Plan.md)
+- MVP hedef tarihi: 22.09.2025
+- Kapsam özetleri: MVP (Etkinlikler, Projeler, Duyurular, Galeri, Statik sayfalar), Tam Sürüm (Üyelik, Entegrasyonlar, Blog, Arama, Raporlama)
+
+Plan dokümanında sprint planı, bilgi mimarisi ve gezinme başlıkları da ayrıntılı olarak yer almaktadır.
