@@ -90,7 +90,7 @@ const HeroSection = () => {
           >
             <div className="text-center">
               <div className="text-2xl font-bold text-primary font-advent-pro">
-                150+
+                30+
               </div>
               <div className="text-sm text-neutral-400 font-poppins">
                 Aktif Üye
@@ -99,14 +99,14 @@ const HeroSection = () => {
             <div className="w-px h-12 bg-neutral-700/50" />
             <div className="text-center">
               <div className="text-2xl font-bold text-primary font-advent-pro">
-                50+
+                2+
               </div>
               <div className="text-sm text-neutral-400 font-poppins">Proje</div>
             </div>
             <div className="w-px h-12 bg-neutral-700/50" />
             <div className="text-center">
               <div className="text-2xl font-bold text-primary font-advent-pro">
-                5
+                1
               </div>
               <div className="text-sm text-neutral-400 font-poppins">
                 Yıl Deneyim
