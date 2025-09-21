@@ -7,6 +7,7 @@ type ButtonProps = {
   variant?: 'primary' | 'outline';
   as?: 'button' | 'link';
   href?: string;
+  target?: '_blank' | '_self';
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
@@ -29,6 +30,7 @@ export default function Button({
   as = 'button',
   href,
   className = '',
+  target = "_self",
   type = 'button',
   onClick,
   disabled = false,
@@ -39,6 +41,7 @@ export default function Button({
     return (
       <Link
         href={href}
+        target={target}
         className={classes}
         aria-disabled={disabled}
         tabIndex={disabled ? -1 : 0}
