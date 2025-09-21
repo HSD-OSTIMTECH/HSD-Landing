@@ -71,9 +71,6 @@ const ApplicationCta = () => {
               >
                 Başvuru Formu
               </Button>
-              <Button as="link" href="/about/careers" variant="outline">
-                Yönetim Ekibi Başvuru Sorgulama
-              </Button>
             </motion.div>
 
             {/* Additional Info */}
