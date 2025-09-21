@@ -1,12 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Button from "../../ui/button";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   navigationData,
   socialMediaLinks,
-  galleryLink,
 } from "../../../data/navigationData";
 
 interface NavbarProps {
@@ -234,8 +232,6 @@ const Navbar = ({ isLogin }: NavbarProps) => {
               {socialMediaLinks.email}
             </a>
             <span>|</span>
-
-            {/* Sosyal Medya İkonları */}
             <div className="flex items-center gap-3">
               <a
                 href={socialMediaLinks.instagram}
@@ -261,357 +257,73 @@ const Navbar = ({ isLogin }: NavbarProps) => {
               >
                 <Icon icon="mdi:medium" className="w-4 h-4" />
               </a>
+              <a
+                href={socialMediaLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                <Icon icon="mdi:github" className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
       </motion.div>
 
-      {/* MAIN NAV SECTION - Scroll'da Sticky */}
-      <motion.nav
-        className="bg-black/95 backdrop-blur-lg border-b border-neutral-800 font-poppins sticky top-0 z-30"
-        initial={false}
-        animate={{
-          y: isScrolled ? -10 : 0,
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-0 py-4 flex justify-between items-center relative">
+      {/* ALT SECTION - Sade Navbar */}
+      <nav className="bg-black/95 backdrop-blur-lg border-b border-neutral-800 font-poppins sticky top-0 z-30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-0 py-4 flex justify-between items-center">
           {/* Sol taraf - Logo */}
           <a href="/" className="flex items-center gap-3">
             <img src="/images/logo.png" alt="HSD Logo" className="h-8" />
           </a>
-
-          {/* Orta Linkler (desktop only) */}
-          <div className="hidden md:flex items-center gap-4">
-            {/* Hakkımızda Dropdown */}
-            <div className="dropdown-container">
-              <button
-                className={`${linkStyle} flex items-center gap-1`}
-                onClick={() => handleDropdownClick("about")}
-              >
-                Hakkımızda
-                <Icon
-                  icon="hugeicons:arrow-down-01"
-                  className={`w-4 h-4 transition-transform ${
-                    aboutDropdownOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {renderMegaMenu(dropdownData.about, aboutDropdownOpen)}
-            </div>
-
-            {/* Projeler Dropdown */}
-            <div className="dropdown-container">
-              <button
-                className={`${linkStyle} flex items-center gap-1`}
-                onClick={() => handleDropdownClick("projects")}
-              >
-                Projeler
-                <Icon
-                  icon="hugeicons:arrow-down-01"
-                  className={`w-4 h-4 transition-transform ${
-                    projectsDropdownOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {renderMegaMenu(dropdownData.projects, projectsDropdownOpen)}
-            </div>
-
-            {/* Etkinlikler Dropdown */}
-            <div className="dropdown-container">
-              <button
-                className={`${linkStyle} flex items-center gap-1`}
-                onClick={() => handleDropdownClick("events")}
-              >
-                Etkinlikler
-                <Icon
-                  icon="hugeicons:arrow-down-01"
-                  className={`w-4 h-4 transition-transform ${
-                    eventsDropdownOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {renderMegaMenu(dropdownData.events, eventsDropdownOpen)}
-            </div>
-
-            {/* Duyurular Dropdown */}
-            <div className="dropdown-container">
-              <button
-                className={`${linkStyle} flex items-center gap-1`}
-                onClick={() => handleDropdownClick("announcements")}
-              >
-                Duyurular
-                <Icon
-                  icon="hugeicons:arrow-down-01"
-                  className={`w-4 h-4 transition-transform ${
-                    announcementsDropdownOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {renderMegaMenu(
-                dropdownData.announcements,
-                announcementsDropdownOpen
-              )}
-            </div>
-
-            {/* Galeri */}
-            <a href={galleryLink.href} className={linkStyle}>
-              {galleryLink.text}
+          {/* Sağ taraf - Hakkımızda Linkleri */}
+          <div className="flex items-center gap-6">
+            <a
+              href="/about"
+              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
+            >
+              Biz Kimiz?
             </a>
-
-            {/* Blog Dropdown */}
-            <div className="dropdown-container">
-              <button
-                className={`${linkStyle} flex items-center gap-1`}
-                onClick={() => handleDropdownClick("blog")}
-              >
-                Blog
-                <Icon
-                  icon="hugeicons:arrow-down-01"
-                  className={`w-4 h-4 transition-transform ${
-                    blogDropdownOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {renderMegaMenu(dropdownData.blog, blogDropdownOpen)}
-            </div>
-
-            {/* Topluluk Dropdown */}
-            <div className="dropdown-container">
-              <button
-                className={`${linkStyle} flex items-center gap-1`}
-                onClick={() => handleDropdownClick("community")}
-              >
-                Topluluk
-                <Icon
-                  icon="hugeicons:arrow-down-01"
-                  className={`w-4 h-4 transition-transform ${
-                    communityDropdownOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {renderMegaMenu(dropdownData.community, communityDropdownOpen)}
-            </div>
-          </div>
-
-          {/* Sağ taraf - Buttons */}
-          <div className="hidden md:flex items-center gap-3">
-            {!isLogin ? (
-              <>
-                <Button variant="outline" href="/login" as="link">
-                  Giriş Yap
-                </Button>
-                <Button variant="primary" href="/register" as="link">
-                  Kayıt Ol
-                </Button>
-              </>
-            ) : (
-              <div className="flex items-center gap-3">
-                <a href="/profile/poyraz" className="flex items-center gap-2">
-                  <img
-                    src="/avatars/poyraz.png"
-                    alt="Profil"
-                    className="w-8 h-8 rounded-full border border-neutral-600"
-                  />
-                  <span className="text-white text-sm hidden lg:block">
-                    Poyraz
-                  </span>
-                </a>
-                <Button variant="outline">
-                  <Icon icon="hugeicons:notification-02" className="w-5 h-5" />
-                </Button>
-                <Button variant="outline">
-                  <Icon icon="hugeicons:settings-02" className="w-5 h-5" />
-                </Button>
-              </div>
-            )}
-          </div>
-
-          {/* Mobile hamburger menu */}
-          <div className="md:hidden">
-            <Button variant="outline" onClick={() => setMenuOpen(!menuOpen)}>
-              <Icon
-                icon={menuOpen ? "hugeicons:cancel-01" : "hugeicons:menu-02"}
-                className="w-6 h-6"
-              />
-            </Button>
+            <a
+              href="/about/hsd"
+              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
+            >
+              HSD Nedir?
+            </a>
+            <a
+              href="/about/team"
+              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
+            >
+              Yönetim Kadrosu
+            </a>
+            <a
+              href="/about/achievements"
+              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
+            >
+              Başarılarımız
+            </a>
+            <a
+              href="/about/partners"
+              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
+            >
+              Destekçilerimiz
+            </a>
+            <a
+              href="/about/faq"
+              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
+            >
+              Sıkça Sorulan Sorular
+            </a>
+            <a
+              href="/about/careers"
+              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
+            >
+              Ekip Katılım Başvurusu
+            </a>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {menuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "100vh" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden bg-black fixed inset-0 top-[73px] z-50 overflow-y-auto"
-            >
-              {/* Ana Menü */}
-              {!mobileSubMenu && (
-                <div className="p-6 space-y-4">
-                  {/* Hakkımızda */}
-                  <button
-                    onClick={() => setMobileSubMenu("about")}
-                    className="flex items-center justify-between w-full text-white text-lg py-2 hover:text-secondary transition-colors"
-                  >
-                    <span>Hakkımızda</span>
-                    <Icon icon="hugeicons:arrow-right-01" className="w-5 h-5" />
-                  </button>
-
-                  {/* Projeler */}
-                  <button
-                    onClick={() => setMobileSubMenu("projects")}
-                    className="flex items-center justify-between w-full text-white text-lg py-2 hover:text-secondary transition-colors"
-                  >
-                    <span>Projeler</span>
-                    <Icon icon="hugeicons:arrow-right-01" className="w-5 h-5" />
-                  </button>
-
-                  {/* Etkinlikler */}
-                  <button
-                    onClick={() => setMobileSubMenu("events")}
-                    className="flex items-center justify-between w-full text-white text-lg py-2 hover:text-secondary transition-colors"
-                  >
-                    <span>Etkinlikler</span>
-                    <Icon icon="hugeicons:arrow-right-01" className="w-5 h-5" />
-                  </button>
-
-                  {/* Duyurular */}
-                  <button
-                    onClick={() => setMobileSubMenu("announcements")}
-                    className="flex items-center justify-between w-full text-white text-lg py-2 hover:text-secondary transition-colors"
-                  >
-                    <span>Duyurular</span>
-                    <Icon icon="hugeicons:arrow-right-01" className="w-5 h-5" />
-                  </button>
-
-                  {/* Galeri */}
-                  <a
-                    href={galleryLink.href}
-                    className="block text-white text-lg py-2 hover:text-secondary transition-colors"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {galleryLink.text}
-                  </a>
-
-                  {/* Blog */}
-                  <button
-                    onClick={() => setMobileSubMenu("blog")}
-                    className="flex items-center justify-between w-full text-white text-lg py-2 hover:text-secondary transition-colors"
-                  >
-                    <span>Blog</span>
-                    <Icon icon="hugeicons:arrow-right-01" className="w-5 h-5" />
-                  </button>
-
-                  {/* Topluluk */}
-                  <button
-                    onClick={() => setMobileSubMenu("community")}
-                    className="flex items-center justify-between w-full text-white text-lg py-2 hover:text-secondary transition-colors"
-                  >
-                    <span>Topluluk</span>
-                    <Icon icon="hugeicons:arrow-right-01" className="w-5 h-5" />
-                  </button>
-
-                  {!isLogin ? (
-                    <div className="pt-4 space-y-3">
-                      <Button
-                        variant="outline"
-                        href="/login"
-                        as="link"
-                        className="w-full"
-                      >
-                        Giriş Yap
-                      </Button>
-                      <Button
-                        variant="primary"
-                        href="/register"
-                        as="link"
-                        className="w-full"
-                      >
-                        Kayıt Ol
-                      </Button>
-                    </div>
-                  ) : (
-                    <div className="pt-4">
-                      <a
-                        href="/profile/poyraz"
-                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-neutral-800 transition-colors"
-                        onClick={() => setMenuOpen(false)}
-                      >
-                        <img
-                          src="/avatars/poyraz.png"
-                          alt="Profil"
-                          className="w-10 h-10 rounded-full border border-neutral-600"
-                        />
-                        <span className="text-white">Poyraz</span>
-                      </a>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Alt Menü */}
-              {mobileSubMenu && (
-                <motion.div
-                  initial={{ x: "100%" }}
-                  animate={{ x: 0 }}
-                  exit={{ x: "100%" }}
-                  transition={{ duration: 0.3 }}
-                  className="p-6 space-y-4"
-                >
-                  {/* Geri Butonu */}
-                  <button
-                    onClick={() => setMobileSubMenu(null)}
-                    className="flex items-center gap-3 text-white text-lg py-2 hover:text-secondary transition-colors mb-6"
-                  >
-                    <Icon icon="hugeicons:arrow-left-01" className="w-5 h-5" />
-                    <span>Geri</span>
-                  </button>
-
-                  {/* Başlık */}
-                  <h3 className="text-white font-bold text-xl mb-6">
-                    {mobileSubMenu &&
-                      dropdownData[mobileSubMenu as keyof typeof dropdownData]
-                        ?.title}
-                  </h3>
-
-                  {/* Linkler */}
-                  <div className="space-y-3">
-                    {mobileSubMenu &&
-                      "links" in
-                        dropdownData[
-                          mobileSubMenu as keyof typeof dropdownData
-                        ] &&
-                      dropdownData[
-                        mobileSubMenu as keyof typeof dropdownData
-                      ].links?.map((link: any, index: number) => (
-                        <a
-                          key={index}
-                          href={link.href}
-                          className="block text-neutral-300 hover:text-white transition-colors py-2 text-base border-b border-neutral-800 pb-3"
-                          onClick={() => {
-                            setMenuOpen(false);
-                            setMobileSubMenu(null);
-                          }}
-                        >
-                          {link.text}
-                        </a>
-                      ))}
-                  </div>
-                </motion.div>
-              )}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.nav>
+      </nav>
     </>
   );
 };
