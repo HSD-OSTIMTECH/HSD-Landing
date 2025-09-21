@@ -8,8 +8,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen flex-col overflox-x-hidden">
+    <div className="flex min-h-screen flex-col overflow-x-hidden">
+      <Navbar isLogin={false} />
       <main className="flex-grow">{children}</main>
+      <Footer />
     </div>
   );
 }
