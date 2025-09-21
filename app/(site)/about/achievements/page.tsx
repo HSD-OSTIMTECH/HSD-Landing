@@ -9,19 +9,19 @@ const Achievements = () => {
       title: "Ayın Sosyal Medya Ekibi Seçildik",
       description:
         "Sosyal medya ekibimizin başarılı çalışmaları ve yaratıcı içerikleri ile ayın en başarılı sosyal medya ekibi ödülünü aldık.",
-      date: "Eylül 2025",
+      date: "Temmuz 2025",
       category: "Sosyal Medya",
-      month: "09",
+      month: "07",
       year: "2025",
     },
     {
       id: 2,
-      title: "Ayın Medium Yazarı Seçilen Ahmet",
+      title: "Ayın Medium Yazarı Seçilen Fatih Alperen Korkmazlı",
       description:
-        "Topluluk üyemiz Ahmet, kaliteli teknik içerikleri ve etkili yazma tarzı ile ayın Medium yazarı seçildi.",
-      date: "Ağustos 2025",
+        "Topluluk üyemiz Fatih Alperen Korkmazlı, kaliteli teknik içerikleri ve etkili yazma tarzı ile ayın Medium yazarı seçildi.",
+      date: "Temmuz 2025",
       category: "İçerik Üretimi",
-      month: "08",
+      month: "07",
       year: "2025",
     },
   ];
