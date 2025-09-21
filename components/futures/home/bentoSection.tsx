@@ -57,9 +57,8 @@ const BentoSection = () => {
           <motion.div
             key={feature.title}
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.08 }}
             className={`group relative bg-neutral-900/50 backdrop-blur-sm border border-neutral-800/50 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 hover:bg-neutral-900/70 ${feature.className}`}
           >
             {/* Background Gradient */}
