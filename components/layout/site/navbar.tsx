@@ -208,6 +208,9 @@ const Navbar = ({ isLogin }: NavbarProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Responsive navbar: full-page burger menu on mobile
+  const aboutLinks = navigationData.about.links;
+
   return (
     <>
       {/* TOP SECTION - Sabit Değil */}
@@ -270,59 +273,72 @@ const Navbar = ({ isLogin }: NavbarProps) => {
         </div>
       </motion.div>
 
-      {/* ALT SECTION - Sade Navbar */}
+      {/* ALT SECTION - Responsive Navbar */}
       <nav className="bg-black/95 backdrop-blur-lg border-b border-neutral-800 font-poppins sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-0 py-4 flex justify-between items-center">
           {/* Sol taraf - Logo */}
           <a href="/" className="flex items-center gap-3">
             <img src="/images/logo.png" alt="HSD Logo" className="h-8" />
           </a>
-          {/* Sağ taraf - Hakkımızda Linkleri */}
-          <div className="flex items-center gap-6">
-            <a
-              href="/about"
-              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
-            >
-              Biz Kimiz?
-            </a>
-            <a
-              href="/about/hsd"
-              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
-            >
-              HSD Nedir?
-            </a>
-            <a
-              href="/about/team"
-              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
-            >
-              Yönetim Kadrosu
-            </a>
-            <a
-              href="/about/achievements"
-              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
-            >
-              Başarılarımız
-            </a>
-            <a
-              href="/about/partners"
-              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
-            >
-              Destekçilerimiz
-            </a>
-            <a
-              href="/about/faq"
-              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
-            >
-              Sıkça Sorulan Sorular
-            </a>
-            <a
-              href="/about/careers"
-              className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
-            >
-              Ekip Katılım Başvurusu
-            </a>
+          {/* Sağ taraf - Linkler (desktop) */}
+          <div className="hidden md:flex items-center gap-6">
+            {aboutLinks.map((link, idx) => (
+              <a
+                key={idx}
+                href={link.href}
+                className="text-neutral-400 hover:text-white transition-colors text-base font-medium"
+              >
+                {link.text}
+              </a>
+            ))}
           </div>
+          {/* Burger menu (mobile) */}
+          <button
+            className="md:hidden flex items-center justify-center p-2 rounded focus:outline-none"
+            aria-label="Menüyü Aç"
+            onClick={() => setMenuOpen(true)}
+          >
+            <Icon icon="mdi:menu" className="text-white text-2xl" />
+          </button>
         </div>
+
+        {/* Full-page mobile menu overlay */}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed top-0 left-0 w-screen h-screen bg-neutral-900 z-50 flex flex-col"
+            >
+              <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-800">
+                <a href="/" className="flex items-center gap-3">
+                  <img src="/images/logo.png" alt="HSD Logo" className="h-10" />
+                </a>
+                <button
+                  className="p-2 rounded focus:outline-none"
+                  aria-label="Menüyü Kapat"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <Icon icon="mdi:close" className="text-white text-2xl" />
+                </button>
+              </div>
+              <div className="flex-1 flex flex-col items-center justify-center gap-6">
+                {aboutLinks.map((link, idx) => (
+                  <a
+                    key={idx}
+                    href={link.href}
+                    className="text-white text-xl font-bold py-2 px-6 rounded hover:bg-primary/10 transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {link.text}
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </>
   );
