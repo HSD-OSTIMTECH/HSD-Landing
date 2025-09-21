@@ -61,18 +61,23 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button
+              as="link"
+              href="/about"
               variant="primary"
               className="px-8 py-3 font-poppins font-semibold"
             >
-              Giriş Yap
+              Hakkımızda
             </Button>
 
             <Button
               variant="outline"
+              as="link"
+              target="_blank"
+              href="https://www.instagram.com/hsd.ostimtech/"
               className="px-8 py-3 font-poppins font-semibold"
             >
-              <Icon icon="mdi:play-circle" className="text-lg mr-2" />
-              Tanıtım Videosu
+              <Icon icon="mdi:instagram" className="text-lg mr-2" />
+              Instagram
             </Button>
           </motion.div>
 
