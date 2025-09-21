@@ -1,387 +1,78 @@
+
 <div align="center">
    <img src="public/images/logo.png" alt="HSD OSTİMTECH Logo" width="120" height="120" />
-   <h1>HSD OSTİMTECH Resmi Web Sitesi — Frontend</h1>
-   <p>Modern, hızlı ve ölçeklenebilir topluluk web sitesi.</p>
+   <h1>HSD OSTİMTECH v.0.0.1 — Landing Page</h1>
+   <p>Modern, hızlı ve ölçeklenebilir topluluk web sitesi. <br><b>Bu sürüm sadece landing page ve temel statik sayfaları içerir.</b></p>
    <p>
       <img alt="Next.js" src="https://img.shields.io/badge/Next.js-15-black?logo=nextdotjs&logoColor=white" />
       <img alt="React" src="https://img.shields.io/badge/React-19-20232a?logo=react&logoColor=61dafb" />
       <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript&logoColor=white" />
       <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-4-06b6d4?logo=tailwindcss&logoColor=white" />
-      <img alt="Framer Motion" src="https://img.shields.io/badge/Framer%20Motion-12-111?logo=framer&logoColor=white" />
-      <img alt="Iconify" src="https://img.shields.io/badge/Iconify-6-1769aa?logo=iconify&logoColor=white" />
-      <img alt="date‑fns" src="https://img.shields.io/badge/date--fns-4-3e7ad8?logo=javascript&logoColor=white" />
    </p>
 </div>
 
-Bu depo, HSD OSTİMTECH (Huawei Student Developers Ostim Teknik Üniversitesi) resmi web sitesinin frontend kodlarını içermektedir. Proje, modern web teknolojileriyle geliştirilmiş, kullanıcı dostu ve sürdürülebilir bir mimariye sahiptir.
+---
+
+## Proje Durumu
+
+**Bu proje HSD OSTİMTECH v.0.0.1 landing page sürümüdür.**
+
+- Sadece ana sayfa ve temel statik bölümler (Hakkımızda, Projeler, Duyurular, Galeri, İletişim, Yasal sayfalar) mevcuttur.
+- Üyelik, admin panel, dinamik içerik, blog, arama, raporlama gibi gelişmiş özellikler ilerleyen sürümlerde eklenecektir.
+
+### MVP Kapsamı
+
+- Ana sayfa
+- Hakkımızda
+- Projeler
+- Duyurular
+- Galeri
+- İletişim
+- Yasal sayfalar
+
+### Yol Haritası
+
+- v.0.0.2: Üyelik sistemi, dinamik blog, Medium entegrasyonu
+- v.0.1.x: Admin panel, etkinlik yönetimi, proje başvuru
+- v.1.x: Tam sürüm, entegrasyonlar, arama, raporlama, gelişmiş profil
 
 ---
 
-## İçerik
+## Kurulum
 
-- [Proje Hakkında](#proje-hakkında)
-- [Teknolojiler](#teknolojiler)
-- [Kurulum ve Çalıştırma](#kurulum-ve-çalıştırma)
-- [Proje Yapısı](#proje-yapısı)
-- [Özellikler ve Modüller](#özellikler-ve-modüller)
-- [Sayfa Analizi](#sayfa-analizi)
-- [Admin Panel](#admin-panel)
-- [Bileşenler ve UI](#bileşenler-ve-ui)
-- [Animasyon ve UX](#animasyon-ve-ux)
-- [Routing Yapısı](#routing-yapısı)
-- [Katkı ve Geliştirme](#katkı-ve-geliştirme)
-- [Lisans](#lisans)
-- [Planlama ve Yol Haritası](#planlama-ve-yol-haritası)
-
----
-
-## Proje Hakkında
-
-HSD OSTİMTECH, Ostim Teknik Üniversitesi'nde kurulmuş olan öğrenci topluluğudur. Bu proje, topluluğun dijital platformu olarak tasarlanmış ve aşağıdaki amaçları hedeflemektedir:
-
-- **Topluluk Yönetimi**: Üye kaydı, onayı ve yönetimi
-- **Etkinlik Organizasyonu**: Workshop, hackathon, seminer gibi etkinliklerin duyurulması ve yönetimi
-- **Proje Showcase**: Topluluk projelerinin sergilenmesi ve kategorize edilmesi
-- **Duyuru Sistemi**: Önemli bilgilendirmelerin üyelere ulaştırılması
-- **Eğitim Platformu**: Blog yazıları, rehberler ve öğrenme kaynaklarının paylaşılması
-- **Sosyal Networking**: Üyeler arası iletişim ve iş birliği imkanları
-
-## Teknolojiler
-
-| Teknoloji     | Versiyon | Açıklama                          |
-| ------------- | -------- | --------------------------------- |
-| Next.js       | 15.3.5   | React tabanlı fullstack framework |
-| React         | 19.0.0   | Frontend component kütüphanesi    |
-| TypeScript    | ^5       | Tip güvenli JavaScript            |
-| Tailwind CSS  | ^4       | Utility-first CSS framework       |
-| Framer Motion | 12.23.3  | Animasyon ve geçiş kütüphanesi    |
-| Iconify       | 6.0.0    | SVG ikon sistemi                  |
-| Date-fns      | 4.1.0    | Tarih işlemleri kütüphanesi       |
-
-## Kurulum ve Çalıştırma
-
-1. **Depoyu klonlayın:**
-
+1. Depoyu klonlayın:
    ```bash
    git clone https://github.com/HSD-OSTIMTECH/HSD-Frontend.git
    cd HSD-Frontend
    ```
-
-2. **Bağımlılıkları yükleyin:**
-
+2. Bağımlılıkları yükleyin:
    ```bash
    pnpm install
-   # veya
-   npm install
-   # veya
-   yarn install
+   # veya npm install
+   # veya yarn install
    ```
-
-3. **Geliştirme sunucusunu başlatın:**
-
+3. Geliştirme sunucusunu başlatın:
    ```bash
    pnpm dev
-   # veya
-   npm run dev
-   # veya
-   yarn dev
+   # veya npm run dev
+   # veya yarn dev
    ```
+4. [http://localhost:3000](http://localhost:3000) adresinde görüntüleyin.
 
-4. **Tarayıcıda açın:**
-   [http://localhost:3000](http://localhost:3000)
-
-## Proje Yapısı
-
-```
-HSD-Frontend/
-├── app/                          # Next.js 13+ App Router
-│   ├── (auth)/                   # Kimlik doğrulama sayfaları
-│   │   ├── login/
-│   │   ├── register/
-│   │   └── forgot-password/
-│   ├── (site)/                   # Ana site sayfaları
-│   │   ├── about/
-│   │   ├── projects/
-│   │   ├── announcements/
-│   │   ├── gallery/
-│   │   ├── contact/
-│   │   ├── profile/[name]/
-│   │   ├── settings/
-│   │   └── policy/
-│   ├── admin/                    # Admin panel sayfaları
-│   │   ├── projects/
-│   │   ├── announcements/
-│   │   ├── forms/
-│   │   └── members/
-│   └── layout.tsx               # Root layout
-├── components/                   # Yeniden kullanılabilir bileşenler
-│   ├── layout/                  # Layout bileşenleri
-│   │   ├── site/               # Site layout bileşenleri
-│   │   ├── adminLayout.tsx     # Admin panel layout
-│   │   ├── adminSidebar.tsx    # Admin sidebar
-│   │   └── settingsLayout.tsx  # Ayarlar layout
-│   ├── shared/                 # Paylaşılan kartlar
-│   │   ├── announcementCard.tsx
-│   │   ├── projectCard.tsx
-│   │   ├── coreTeamCard.tsx
-│   │   └── ...
-│   └── ui/                     # Temel UI bileşenleri
-│       ├── button.tsx
-│       ├── selectBox.tsx
-│       └── calendar.tsx
-├── public/                      # Statik dosyalar
-│   ├── images/
-│   └── avatars/
-└── styles/                     # CSS dosyaları
-    └── globals.css
-```
-
-## Özellikler ve Modüller
-
-### 🏠 **Ana Sayfa**
-
-- Hero section ile topluluk tanıtımı
-- Ekip slider'ı
-- Öne çıkan projeler
-- Etkinlik duyuruları
-- Hızlı erişim butonları
-
-### 👥 **Hakkımızda**
-
-- Topluluk vizyonu ve misyonu
-- Core team üyeleri
-- Departman bazında filtreleme
-- Sosyal medya entegrasyonu
-- Başarı hikayelerimiz
-
-### 🚀 **Projeler**
-
-- Kategori bazında proje listesi (UI/UX, Web, Mobil, Farkındalık)
-- Proje detay sayfaları
-- GitHub entegrasyonu
-- Canlı demo linkleri
-- Teknoloji etiketleri
-
-### 📢 **Duyurular**
-
-- Önemli duyurular bölümü
-- Tarih ve kategori filtreleme
-- Modal ile detay görüntüleme
-- Yazar bilgileri
-- Etkileşimli kart tasarımı
-
-### 🖼️ **Galeri**
-
-- Etkinlik fotoğrafları
-- Grid layout
-- Responsive tasarım
-- Lightbox görüntüleme
-
-### 👤 **Profil Sistemi**
-
-- Kişisel profil sayfaları
-- Sosyal medya linkleri
-- Proje geçmişi
-- Başarım rozetleri
-
-### ⚙️ **Ayarlar**
-
-- Tema ayarları (Dark/Light/System)
-- Bildirim tercihleri
-- Güvenlik ayarları
-- Hesap yönetimi
-
-## Sayfa Analizi
-
-### **Site Sayfaları (8 ana kategori)**
-
-1. **Kimlik Doğrulama (`/auth`)**
-
-   - Giriş yapma sistemi
-   - Kayıt olma formu
-   - Şifre sıfırlama
-
-2. **Ana İçerik Sayfaları**
-
-   - Ana sayfa (`/`)
-   - Hakkımızda (`/about`)
-   - Projeler (`/projects`)
-   - Duyurular (`/announcements`)
-   - Galeri (`/gallery`)
-   - İletişim (`/contact`)
-
-3. **Kullanıcı Sayfaları**
-
-   - Dinamik profil (`/profile/[name]`)
-   - Ayarlar (`/settings/*`)
-
-4. **Yasal Sayfalar (`/policy`)**
-   - Gizlilik politikası
-   - Kullanım şartları
-   - Çerez politikası
-
-## Admin Panel
-
-### **Kapsamlı Yönetim Sistemi**
-
-**Proje Yönetimi:**
-
-- Proje ekleme/düzenleme
-- Kategori yönetimi
-- GitHub entegrasyonu
-- Görsel yükleme
-
-**Duyuru Yönetimi:**
-
-- Duyuru oluşturma
-- Yazar atama
-- Tarihleme sistemi
-- Öncelik belirleme
-
-**Form Yönetimi:**
-
-- Form oluşturucu
-- Soru ekleme/düzenleme
-- Yanıt analizi
-- Excel export
-
-**Üye Yönetimi:**
-
-- Üye başvuru onayı
-- Reddetme sebepleri
-- Departman atama
-- İstatistikler
-
-**Güvenlik Özellikleri:**
-
-- Sadece masaüstü erişim
-- Modal tabanlı düzenleme
-- Onay mekanizmaları
-- Loglama sistemi
-
-## Bileşenler ve UI
-
-### **Temel UI Bileşenleri**
-
-- **Button**: 3 varyant (primary, outline, ghost)
-- **SelectBox**: Animasyonlu dropdown
-- **Calendar**: Tarih seçici
-- **Modal**: Overlay tabanlı popup'lar
-
-### **Kart Bileşenleri**
-
-- **AnnouncementCard**: Duyuru kartları
-- **ProjectCard**: Proje showcase kartları
-- **CoreTeamCard**: Ekip üyesi kartları
-- **GalleryCard**: Galeri görüntü kartları
-- **FormCard**: Form yönetim kartları
-
-### **Layout Bileşenleri**
-
-- **Navbar**: Mega menu sistemli navigasyon
-- **Footer**: Sosyal medya linkleri
-- **AdminSidebar**: Collapsible admin menü
-- **SettingsSidebar**: Ayarlar navigasyonu
-
-## Animasyon ve UX
-
-### **Framer Motion Entegrasyonu**
-
-- Sayfa geçiş animasyonları
-- Modal açılış/kapanış efektleri
-- Hover ve focus durumları
-- Scroll tetiklemeli animasyonlar
-- Loading state'leri
-
-### **Responsive Tasarım**
-
-- Mobile-first yaklaşım
-- Tailwind CSS breakpoint'leri
-- Adaptive layout'lar
-- Touch-friendly interface
-
-### **Erişilebilirlik**
-
-- ARIA label'ları
-- Keyboard navigasyon
-- Color contrast compliance
-- Screen reader desteği
-
-## Routing Yapısı
-
-### **Next.js 13+ App Router**
-
-- File-based routing
-- Layout composition
-- Server ve Client Components
-- Dynamic routing (`[name]`)
-- Route groups (`(auth)`, `(site)`)
-
-### **SEO Optimizasyonu**
-
-- Meta tag yönetimi
-- Open Graph desteği
-- Sitemap.xml
-- Robots.txt
-
-## Katkı ve Geliştirme
-
-### **Geliştirme Süreci**
-
-1. Issue oluşturun
-2. Feature branch açın
-3. Değişiklikleri commit edin
-4. Pull request gönderin
-5. Code review süreci
-6. Merge ve deploy
-
-### **Kod Standartları**
-
-- TypeScript strict mode
-- ESLint kuralları
-- Prettier formatlaması
-- Component dokümantasyonu
-
-### **Test Stratejisi**
-
-- Unit testler
-- Integration testler
-- E2E testler
-- Performance testleri
+---
 
 ## Lisans
 
 Bu proje **HSD OSTİMTECH**'e aittir. Tüm hakları saklıdır.
 
-**Kullanım İzinleri:**
-
-- Eğitim amaçlı inceleme ✅
-- Fork ve katkı ✅
-- Ticari kullanım ❌
-- Yeniden dağıtım ❌
-
 Detaylı bilgi için [LICENSE](LICENSE) dosyasını inceleyin.
 
 ---
 
-**Geliştirici Ekibi:**
+## Katkı
 
-- Core Team: Full-stack geliştiriciler
-- UI/UX Team: Tasarım uzmanları
-- DevOps Team: Deployment ve altyapı
+Geliştirme ve katkı için lütfen bir issue açın veya pull request gönderin. Tüm yeni özellikler ve modüller için roadmap ve plan dokümanını takip edin.
 
 ---
 
-_Bu dokümantasyon sürekli güncellenmektedir. Son güncellemeler için repository'yi takip edin._
-
----
-
-## Planlama ve Yol Haritası
-
-Projenin MVP kapsamı, tam sürüm hedefleri ve zaman çizelgesi detayları için yol haritasını inceleyin:
-
-- Plan dokümanı: [Plan.md](./Plan.md)
-- MVP hedef tarihi: 22.09.2025
-- Kapsam özetleri: MVP (Etkinlikler, Projeler, Duyurular, Galeri, Statik sayfalar), Tam Sürüm (Üyelik, Entegrasyonlar, Blog, Arama, Raporlama)
-
-Plan dokümanında sprint planı, bilgi mimarisi ve gezinme başlıkları da ayrıntılı olarak yer almaktadır.
+_Bu dokümantasyon MVP ve ilk sürüm için hazırlanmıştır. Özellikler ve modüller ilerleyen sürümlerde eklenecektir._
