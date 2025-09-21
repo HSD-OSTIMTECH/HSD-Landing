@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 const Team = () => {
   // Ana başkan
   const president = {
-    name: "Ahmet Yılmaz",
+    name: "Süeda Karabulut",
     title: "Genel Başkan",
-    avatar: "/avatars/defaultAvatar.png",
+    avatar: "/avatars/süeda.jpeg",
   };
 
   // Grup başkanları ve ekipleri
@@ -16,55 +16,66 @@ const Team = () => {
       id: 1,
       name: "Yazılım & Proje",
       leader: {
-        name: "Mehmet Demir",
-        avatar: "/avatars/defaultAvatar.png",
+        name: "Poyraz Avsever",
+        avatar: "/avatars/poyraz.jpeg",
       },
       members: [
-        { name: "Ali Kaya", avatar: "/avatars/defaultAvatar.png" },
-        { name: "Ayşe Şahin", avatar: "/avatars/defaultAvatar.png" },
-        { name: "Fatma Özkan", avatar: "/avatars/defaultAvatar.png" },
+        { name: "Halitcan Emir", avatar: "/avatars/defaultAvatar.png" },
+        { name: "Talha Tarlabaz", avatar: "/avatars/talha.jpeg" },
+        { name: "Ebubekir Kakilli", avatar: "/avatars/ebubekir.jpeg" },
+        { name: "Beste Aydoğan", avatar: "/avatars/beste.jpeg" },
+        { name: "Yusuf T. Göker", avatar: "/avatars/yusuft.jpeg" },
+        { name: "Boran Kağan", avatar: "/avatars/defaultAvatar.png" },
+        { name: "Mustafa Burak Canşi", avatar: "/avatars/burak.jpeg" },
+        { name: "Zeynep Sude", avatar: "/avatars/zeynep.jpeg" },
       ],
     },
     {
       id: 2,
       name: "Sosyal Medya & İçerik",
       leader: {
-        name: "Zeynep Aydın",
-        avatar: "/avatars/defaultAvatar.png",
+        name: "Hayrunisa Günaydın",
+        avatar: "/avatars/hayrunisa.jpeg",
       },
       members: [
-        { name: "Burak Çelik", avatar: "/avatars/defaultAvatar.png" },
-        { name: "Seda Koç", avatar: "/avatars/defaultAvatar.png" },
-        { name: "Emre Yıldız", avatar: "/avatars/defaultAvatar.png" },
+        { name: "Ceren Taskan", avatar: "/avatars/ceren.jpeg" },
+        { name: "Bilgin Eser ", avatar: "/avatars/bilgin.jpeg" },
+        { name: "Efe Karakuyu", avatar: "/avatars/efekara.jpeg" },
+        { name: "Ziad Mohamed", avatar: "/avatars/defaultAvatar.png" },
+        { name: "Poyraz Avsever", avatar: "/avatars/poyraz.jpeg" },
       ],
     },
     {
       id: 3,
       name: "Araştırma & Medium",
       leader: {
-        name: "Oğuz Arslan",
-        avatar: "/avatars/defaultAvatar.png",
+        name: "Irmak Kavak",
+        avatar: "/avatars/ırmak.jpeg",
       },
       members: [
-        { name: "Merve Güneş", avatar: "/avatars/defaultAvatar.png" },
-        { name: "Deniz Öztürk", avatar: "/avatars/defaultAvatar.png" },
-        { name: "Can Polat", avatar: "/avatars/defaultAvatar.png" },
+        { name: "Beste Aydoğan", avatar: "/avatars/beste.jpeg" },
+        { name: "Fatih Alperen", avatar: "/avatars/fatih.jpeg" },
+        { name: "Yiğit Kaan Bozkurt", avatar: "/avatars/yigit.jpeg" },
+        { name: "Nergiz Doğan", avatar: "/avatars/nergiz.jpeg" },
+        { name: "Poyraz Avsever", avatar: "/avatars/poyraz.jpeg" },
       ],
     },
     {
       id: 4,
       name: "Etkinlik ve Sponsorluk",
       leader: {
-        name: "Elif Karaca",
-        avatar: "/avatars/defaultAvatar.png",
+        name: "Zeynep Sude",
+        avatar: "/avatars/zeynep.jpeg",
       },
-      members: [
-        { name: "Murat Doğan", avatar: "/avatars/defaultAvatar.png" },
-        { name: "Gizem Yılmaz", avatar: "/avatars/defaultAvatar.png" },
-        { name: "Barış Kılıç", avatar: "/avatars/defaultAvatar.png" },
-      ],
+      members: [],
     },
   ];
+
+  // Dinamik istatistikler
+  const presidentCount = 1;
+  const groupLeaderCount = departments.length;
+  const memberCount = departments.reduce((acc, dept) => acc + dept.members.length, 0);
+  const totalManagerCount = presidentCount + groupLeaderCount + memberCount;
 
   return (
     <div className="min-h-screen bg-black text-white py-20">
@@ -197,19 +208,19 @@ const Team = () => {
           <div className="bg-neutral-900/30 backdrop-blur-sm border border-neutral-800/50 rounded-xl p-6">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div>
-                <div className="text-xl font-bold text-primary mb-1">1</div>
+                <div className="text-xl font-bold text-primary mb-1">{presidentCount}</div>
                 <div className="text-neutral-400 text-sm">Genel Başkan</div>
               </div>
               <div>
-                <div className="text-xl font-bold text-primary mb-1">4</div>
+                <div className="text-xl font-bold text-primary mb-1">{groupLeaderCount}</div>
                 <div className="text-neutral-400 text-sm">Grup Başkanı</div>
               </div>
               <div>
-                <div className="text-xl font-bold text-primary mb-1">12</div>
+                <div className="text-xl font-bold text-primary mb-1">{memberCount}</div>
                 <div className="text-neutral-400 text-sm">Ekip Üyesi</div>
               </div>
               <div>
-                <div className="text-xl font-bold text-primary mb-1">17</div>
+                <div className="text-xl font-bold text-primary mb-1">{totalManagerCount}</div>
                 <div className="text-neutral-400 text-sm">Toplam Yönetici</div>
               </div>
             </div>
