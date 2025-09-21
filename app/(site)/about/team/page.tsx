@@ -104,9 +104,8 @@ const Team = () => {
         {/* Ana Başkan */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.3 }}
           className="flex flex-col items-center mb-16"
         >
           <div className="text-center">
@@ -137,18 +136,16 @@ const Team = () => {
         {/* Department Leaders */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true, amount: 0.3 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
         >
           {departments.map((dept, index) => (
             <motion.div
               key={dept.id}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true, amount: 0.3 }}
               className="text-center"
             >
               {/* Department Title */}
@@ -178,12 +175,11 @@ const Team = () => {
                   <motion.div
                     key={memberIndex}
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{
                       duration: 0.5,
                       delay: index * 0.1 + memberIndex * 0.1 + 0.3,
                     }}
-                    viewport={{ once: true, amount: 0.3 }}
                     className="text-center"
                   >
                     <img
@@ -202,9 +198,8 @@ const Team = () => {
         {/* Bottom Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true, amount: 0.3 }}
           className="text-center"
         >
           <div className="bg-neutral-900/30 backdrop-blur-sm border border-neutral-800/50 rounded-xl p-6">
