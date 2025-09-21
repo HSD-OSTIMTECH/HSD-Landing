@@ -24,19 +24,31 @@ const BlogCard: React.FC<BlogCardProps> = ({ title, description, date, author, i
         />
       )}
       <div className="flex flex-col gap-2 p-5 flex-1">
-        <div className="flex items-center gap-2 text-xs text-neutral-400 font-poppins mb-1">
-          <Icon icon="hugeicons:calendar-01" className="text-primary text-base" />
-          <span>{date}</span>
-          <span className="mx-2">•</span>
-          <Icon icon="hugeicons:user-01" className="text-primary text-base" />
-          <span>{author}</span>
-        </div>
-        <h3 className="text-lg font-bold font-advent-pro text-white group-hover:text-primary transition-colors duration-300">
+        {(date || author) && (
+          <div className="flex items-center gap-2 text-xs text-neutral-400 font-poppins mb-1">
+            {date && (
+              <>
+                <Icon icon="hugeicons:calendar-01" className="text-primary text-base" />
+                <span>{date}</span>
+              </>
+            )}
+            {date && author && <span className="mx-2">•</span>}
+            {author && (
+              <>
+                <Icon icon="hugeicons:user-01" className="text-primary text-base" />
+                <span>{author}</span>
+              </>
+            )}
+          </div>
+        )}
+        <h3 className="text-lg font-bold font-advent-pro text-white group-hover:text-primary transition-colors duration-300 line-clamp-1 sm:line-clamp-2">
           {title}
         </h3>
-        <p className="text-neutral-400 font-poppins text-sm line-clamp-3">
-          {description}
-        </p>
+        {description && (
+          <p className="text-neutral-400 font-poppins text-sm line-clamp-3">
+            {description}
+          </p>
+        )}
       </div>
     </a>
   );
