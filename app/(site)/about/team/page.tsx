@@ -67,7 +67,9 @@ const Team = () => {
         name: "Zeynep Sude",
         avatar: "/avatars/zeynep.jpeg",
       },
-      members: [],
+      members: [
+        { name: "Berk", avatar: "/avatars/defaultAvatar.png" },
+      ],
     },
   ];
 

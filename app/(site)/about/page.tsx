@@ -51,7 +51,7 @@ const About = () => {
               className="relative"
             >
               <img
-                src="/images/defaultImage.png"
+                src="/images/biz.png"
                 alt="HSD OSTİMTECH Topluluk"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
@@ -204,7 +204,7 @@ const About = () => {
               className="relative"
             >
               <img
-                src="/images/defaultImage.png"
+                src="/images/biz2.png"
                 alt="Vizyon - Geleceğin Teknoloji Liderleri"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
@@ -214,78 +214,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center">
-        <div className="max-w-7xl mx-auto w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-          >
-            {/* Left Side - Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="relative order-2 lg:order-1"
-            >
-              <img
-                src="/images/defaultImage.png"
-                alt="Misyon - Teknoloji Eğitimi ve İnovasyon"
-                className="w-full h-auto rounded-2xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent rounded-2xl"></div>
-            </motion.div>
-
-            {/* Right Side - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="space-y-6 order-1 lg:order-2"
-            >
-              <div className="inline-flex items-center gap-2 bg-neutral-800/30 backdrop-blur-sm border border-neutral-700/50 rounded-full px-4 py-2">
-                <Icon icon="mdi:target" className="text-secondary text-sm" />
-                <span className="text-sm font-medium text-neutral-300 font-poppins">
-                  Misyonumuz
-                </span>
-              </div>
-
-              <h2 className="text-3xl md:text-4xl font-bold font-advent-pro text-white">
-                Teknoloji ile{" "}
-                <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
-                  Güçlendirme
-                </span>{" "}
-                ve Eğitim
-              </h2>
-
-              <div className="space-y-4 text-lg text-neutral-300 font-poppins leading-relaxed">
-                <p>
-                  Öğrencilere kapsamlı teknoloji eğitimi sunarak, onların teorik
-                  bilgilerini pratik deneyimlerle desteklemek ve sektörde
-                  ihtiyaç duyulan becerileri kazandırmak misyonumuzun
-                  merkezindedir.
-                </p>
-                <p>
-                  İnovasyon odaklı projeler geliştirerek, öğrencilerin
-                  yaratıcılığını ve problem çözme yeteneklerini artırmak, aynı
-                  zamanda onları gerçek dünya teknoloji sorunlarıyla tanıştırmak
-                  hedefliyoruz.
-                </p>
-                <p>
-                  Topluluk üyelerinin kişisel ve profesyonel gelişimini
-                  destekleyerek, onları teknoloji sektöründe başarılı kariyerler
-                  inşa etmeye hazırlamak en temel görevimizdir.
-                </p>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };

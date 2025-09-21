@@ -110,9 +110,9 @@ const ApplicationCta = () => {
           >
             <div className="relative">
               <img
-                src="/images/defaultImage.png"
+                src="/images/gencofis.png"
                 alt="Teknoloji ve Kariyer"
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                className="w-full h-96 rounded-2xl shadow-2xl object-cover"
               />
               {/* Optional overlay effect */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>

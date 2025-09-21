@@ -97,7 +97,7 @@ const HSD = () => {
               className="relative"
             >
               <img
-                src="/images/defaultImage.png"
+                src="/images/hsd.png"
                 alt="Huawei Student Developers Program"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
@@ -126,9 +126,9 @@ const HSD = () => {
               className="relative"
             >
               <img
-                src="/images/defaultImage.png"
+                src="/images/hsd2.png"
                 alt="HSD Program Faydaları"
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
             </motion.div>
