@@ -77,50 +77,42 @@ const Footer = () => {
 
             {/* Sosyal Medya */}
             <div className="flex gap-4">
-              <a
-                href="https://instagram.com/hsdostim"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-neutral-800 hover:bg-primary/20 p-2 rounded-lg transition-all duration-300 group"
-              >
-                <Icon
-                  icon="mdi:instagram"
-                  className="text-neutral-400 group-hover:text-primary text-xl"
-                />
-              </a>
-              <a
-                href="https://linkedin.com/company/hsdostim"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-neutral-800 hover:bg-primary/20 p-2 rounded-lg transition-all duration-300 group"
-              >
-                <Icon
-                  icon="mdi:linkedin"
-                  className="text-neutral-400 group-hover:text-primary text-xl"
-                />
-              </a>
-              <a
-                href="https://medium.com/@hsdostim"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-neutral-800 hover:bg-primary/20 p-2 rounded-lg transition-all duration-300 group"
-              >
-                <Icon
-                  icon="mdi:medium"
-                  className="text-neutral-400 group-hover:text-primary text-xl"
-                />
-              </a>
-              <a
-                href="https://github.com/HSD-OSTIMTECH"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-neutral-800 hover:bg-primary/20 p-2 rounded-lg transition-all duration-300 group"
-              >
-                <Icon
-                  icon="mdi:github"
-                  className="text-neutral-400 group-hover:text-primary text-xl"
-                />
-              </a>
+              {Object.entries(socialMediaLinks).map(([key, href]) => {
+                let icon = "";
+                switch (key) {
+                  case "instagram":
+                    icon = "mdi:instagram";
+                    break;
+                  case "linkedin":
+                    icon = "mdi:linkedin";
+                    break;
+                  case "medium":
+                    icon = "mdi:medium";
+                    break;
+                  case "github":
+                    icon = "mdi:github";
+                    break;
+                  case "email":
+                    icon = "mdi:email";
+                    break;
+                  default:
+                    icon = "mdi:link";
+                }
+                return (
+                  <a
+                    key={key}
+                    href={key === "email" ? `mailto:${href}` : href}
+                    target={key === "email" ? undefined : "_blank"}
+                    rel={key === "email" ? undefined : "noopener noreferrer"}
+                    className="bg-neutral-800 hover:bg-primary/20 p-2 rounded-lg transition-all duration-300 group"
+                  >
+                    <Icon
+                      icon={icon}
+                      className="text-neutral-400 group-hover:text-primary text-xl"
+                    />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
