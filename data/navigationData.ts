@@ -218,8 +218,8 @@ export const galleryLink = {
 // Sosyal medya linkleri
 export const socialMediaLinks = {
   instagram: "https://instagram.com/hsd.ostimtech",
-  linkedin: "https://linkedin.com/company/hsdostim",
-  medium: "https://medium.com/@hsdostim",
+  linkedin: "https://linkedin.com/company/hsd-ostimtech",
+  medium: "https://medium.com/@hsd.ostimtech",
   github: "https://github.com/HSD-OSTIMTECH",
   email: "hsd.ostimtech@gmail.com"
 };
