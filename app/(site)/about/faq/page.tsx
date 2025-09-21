@@ -10,7 +10,7 @@ const questions = [
   },
   {
     q: "Topluluğa nasıl üye olabilirim?",
-    a: 'Ana sayfadaki "Hemen Üye Ol" butonuna tıklayarak veya profil sayfanızdan kayıt formunu doldurarak topluluğa üye olabilirsiniz.',
+    a: 'Instagramdan "hsd.ostimtech" hesabımızı takip ederek veya iletişim sayfasından bize ulaşarak üye olabilirsiniz.',
   },
   {
     q: "Etkinliklere kimler katılabilir?",
@@ -21,16 +21,12 @@ const questions = [
     a: "Projeler, topluluk üyelerinin katılımıyla oluşturulan ekipler tarafından yürütülür. Proje detayları ve katılım için projeler sayfasını inceleyebilirsiniz.",
   },
   {
-    q: "Şifremi unuttum, ne yapmalıyım?",
-    a: 'Giriş ekranındaki "Şifreni mi unuttun?" bağlantısına tıklayarak şifre sıfırlama işlemini başlatabilirsiniz.',
-  },
-  {
     q: "Duyuruları nereden takip edebilirim?",
-    a: 'Tüm güncel duyurulara "Duyurular" sayfasından ulaşabilirsiniz.',
+    a: 'Tüm güncel duyurulara "Duyurular" sayfasından ulaşabilirsiniz. (Henüz aktif değil)',
   },
   {
     q: "Topluluk yönetimiyle nasıl iletişime geçebilirim?",
-    a: "İletişim sayfasındaki formu doldurarak veya sosyal medya hesaplarımızdan bize ulaşabilirsiniz.",
+    a: "Sosyal medya hesaplarımızdan bize ulaşabilirsiniz.",
   },
 ];
 
