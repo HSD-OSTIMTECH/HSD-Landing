@@ -221,7 +221,7 @@ export const socialMediaLinks = {
   linkedin: "https://linkedin.com/company/hsdostim",
   medium: "https://medium.com/@hsdostim",
   github: "https://github.com/HSD-OSTIMTECH",
-  email: "hello@hsdostim.com"
+  email: "hsd.ostimtech@gmail.com"
 };
 
 // Yasal linkler
