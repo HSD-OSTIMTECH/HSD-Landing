@@ -63,8 +63,13 @@ const ApplicationCta = () => {
               viewport={{ once: true }}
               className="flex items-center gap-4"
             >
-              <Button as="link" href="/about/careers" variant="primary">
-                Topluluğa Katıl
+              <Button
+                as="link"
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeD4RFuv6_z-BcEMJjRAZUGqDToY4qqXgjtNG0uNaMf2EOnpg/viewform?fbclid=PAT01DUAM8wflleHRuA2FlbQIxMAABp4O47kmXgZxHJ4a3_YDx6LMk7SCJwoDa-MKIAPbqE3CnbFm5R9hlZtHEZ2lF_aem_R00sTDxJ7K7-5ZmAm30KhQ"
+                variant="primary"
+              >
+                Başvuru Formu
               </Button>
               <Button as="link" href="/about/careers" variant="outline">
                 Yönetim Ekibi Başvuru Sorgulama
